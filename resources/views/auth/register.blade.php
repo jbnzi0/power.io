@@ -25,6 +25,23 @@
                             </div>
                         </div>
 
+                
+                        <div class="form-group row">
+                            <label for="field" class="col-md-4 col-form-label text-md-right">{{ __('Field') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="field" value="{{ old('field') }}" required autocomplete="field">
+
+                                @error('field')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        
+
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
@@ -58,6 +75,29 @@
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Status') }}</label>
+
+                            <div class="col-md-6">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input @error('status') is-invalid @enderror" type="radio" name="student" id="inlineRadio1" value="{{ old('student') }}">
+                                    <label class="form-check-label" for="inlineRadio1">Student</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input @error('status') is-invalid @enderror" type="radio" name="professor" id="inlineRadio2" value="{{ old('professor') }}">
+                                    <label class="form-check-label" for="inlineRadio2">Professor</label>
+                                </div>
+
+                            </div>
+
+                                @error('status')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                         </div>
 
