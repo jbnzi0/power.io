@@ -15,7 +15,7 @@ class AddExtraFieldToUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->string('status');
-            $table->boolean('type');
+            $table->string('type');
             $table->string('field');
         });
     }
