@@ -34,14 +34,14 @@
                                 <td>{{ user.email }}</td>
                                 <td>{{ user.type }}</td>
                                 <td>{{ user.field }}</td>
-                                  <td>{{ new Date(user.created_at).toDateString() }}</td>
+                                <td>{{ new Date(user.created_at).toDateString() }}</td>
                                 <td>
                                     <a href="#">
                                         <i class="fa fa-edit"></i>
                                     </a>
                                     
                                     <a href="#"> 
-                                        <i class="fa fa-trash red"></i> <!-- Change the color later -->
+                                        <i class="fa fa-trash"></i> <!-- Change the color later -->
                                     </a>
                                 </td>
                                 </tr>
@@ -54,11 +54,11 @@
         </div>
         
         
-        <div class="modal fade" id="addNew" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="addNew" tabindex="-1" role="dialog" aria-labelledby="addNewCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Add New Researcher</h5>
+                <h5 class="modal-title" id="addNewLongTitle">Add New Researcher</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
@@ -82,6 +82,7 @@
                     <div class="form-group">
                     <input type="password" v-model="form.password" name="password" placeholder="***********"
                         class="form-control" :class="{ 'is-invalid': form.errors.has('password')}">
+
                     <has-error :form="form" field="password"></has-error>
                     </div>
 
@@ -105,8 +106,8 @@
                             <select name="status" v-model="form.status" id="status" class="form-control" :class="{ 'is-invalid': form.errors.has('status') }">
                                 <option value="">Select </option>
                                 <option value="admin">Professor</option>
-                                <option value="author">Student</option>
-                                <option value="author">Alumni</option>
+                                <option value="student">Student</option>
+                                <option value="alumni">Alumni</option>
                             </select>
                             <has-error :form="form" field="status"></has-error>
                     </div>
@@ -146,15 +147,20 @@
         },
         methods: {
             saveUser(){
-                this.form.post('api/user');
+                this.form.post('api/user')
+                Fire.$emit('user-created')
+                //$('#addNew').modal('hide')
             },
             getUsers(){
-                axios.get('api/user').then(({ data }) => (this.users = data.data ));
+                axios.get('api/user').then(({ data }) => (this.users = data.data ))
             }
         },
         created(){
             this.getUsers();
-            setInterval(() => this.getUsers(), 3000);
+            Fire.$on('user-created', () => {
+                this.getUsers();
+            });
+            //setInterval(() => this.getUsers(), 3000);
         }
     }
 </script>
