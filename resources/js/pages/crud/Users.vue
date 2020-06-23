@@ -7,7 +7,7 @@
                             <h3 class="card-title">Researchers List</h3>
 
                             <div class="card-tools">
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addNew">Add New <i class="fas fa-user-plus fa-fw"> </i></button>
+                                <button class="btn btn-primary" @click="newModal">Add New <i class="fas fa-user-plus fa-fw"> </i></button>
                             </div>
                         </div>
                         
@@ -37,10 +37,10 @@
                                 <td>{{ new Date(user.created_at).toDateString() }}</td>
                                 <td>
                                     <a href="#">
-                                        <i class="fa fa-edit"></i>
+                                        <i class="fa fa-edit" @click="editModal(user)"></i>
                                     </a>
                                     
-                                    <a href="#"> 
+                                    <a href="#" @click="deleteUser(user.id)"> 
                                         <i class="fa fa-trash"></i> <!-- Change the color later -->
                                     </a>
                                 </td>
@@ -54,17 +54,18 @@
         </div>
         
         
-        <div class="modal fade" id="addNew" tabindex="-1" role="dialog" aria-labelledby="addNewCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="addNew" tabindex="-1" role="dialog" aria-labelledby="addNew" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="addNewLongTitle">Add New Researcher</h5>
+                <h5 v-show="editMode" class="modal-title" id="addNewLongTitle">Edit Researcher</h5>
+                <h5 v-show="!editMode" class="modal-title" id="addNewLongTitle">Add New Researcher</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
 
-            <form @submit.prevent="saveUser">
+            <form @submit.prevent="editMode ? editUser() : saveUser()">
 
                 <div class="modal-body">
                     <div class="form-group">
@@ -95,8 +96,8 @@
                     <div class="form-group">
                             <select name="type" v-model="form.type" id="type" class="form-control" :class="{ 'is-invalid': form.errors.has('type') }">
                                 <option value="">Attribute Privileges</option>
-                                <option value="admin">Admin</option>
-                                <option value="user">Standard User</option>
+                                <option value="Admin">Admin</option>
+                                <option value="User">Standard User</option>
                             </select>
                             <has-error :form="form" field="type"></has-error>
                     </div>
@@ -105,9 +106,9 @@
                      <div class="form-group">
                             <select name="status" v-model="form.status" id="status" class="form-control" :class="{ 'is-invalid': form.errors.has('status') }">
                                 <option value="">Select </option>
-                                <option value="admin">Professor</option>
-                                <option value="student">Student</option>
-                                <option value="alumni">Alumni</option>
+                                <option value="Professor">Professor</option>
+                                <option value="Student">Student</option>
+                                <option value="Alumni">Alumni</option>
                             </select>
                             <has-error :form="form" field="status"></has-error>
                     </div>
@@ -117,7 +118,8 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-success">Create</button>
+                    <button v-show="editMode" type="submit" class="btn btn-success">Update</button>
+                    <button v-show="!editMode" type="submit" class="btn btn-success">Create</button>
                 </div>
             </form>
             </div>
@@ -133,8 +135,10 @@
     export default {
         data(){
             return {
+                editMode: false,
                 users: {},
                 form: new Form({
+                    id:'',
                     name : '',
                     email: '',
                     password: '',
@@ -146,10 +150,57 @@
             }
         },
         methods: {
+            editModal(user){
+                this.editMode = true
+                this.form.reset()
+                $('#addNew').modal('show')
+                this.form.fill(user)
+            },
+            newModal(){
+                this.editMode = false
+                this.form.reset()
+                $('#addNew').modal('show')
+            },
+            editUser(){
+               this.form.put('api/user/'+this.form.id)
+               .then(() => {
+                      $('#addNew').modal('hide')
+                      Swal.fire('Edited!', 'User\'s informations edited', 'success')
+                      Fire.$emit('user-created')
+               })
+               .catch(()=> {
+                    Fire.$emit('user-created')
+                    Swal.fire("Failed!", "Something went wrong", "warning")
+               }) 
+                
+            },
+            deleteUser(id){
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: "You won't be able to revert this!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, delete it!'
+                    }).then((result) => {
+                        if(result.value){
+                            this.form.delete('api/user/'+id).then(() =>{
+                                    Swal.fire('Removed!', 'This user has been removed!', 'success')
+                                    Fire.$emit('user-created')
+                            }).catch(() => {
+                                Fire.$emit('user-created')
+                                Swal.fire("Failed!", "Something went wrong", "warning")
+                                
+                            })
+                        }
+                    })
+            },
             saveUser(){
                 this.form.post('api/user')
                 Fire.$emit('user-created')
-                //$('#addNew').modal('hide')
+                Toast.fire({ icon: 'success', title: 'Researcher Created succesfully' })
+                $('#addNew').modal('hide')
             },
             getUsers(){
                 axios.get('api/user').then(({ data }) => (this.users = data.data ))
@@ -160,7 +211,6 @@
             Fire.$on('user-created', () => {
                 this.getUsers();
             });
-            //setInterval(() => this.getUsers(), 3000);
         }
     }
 </script>

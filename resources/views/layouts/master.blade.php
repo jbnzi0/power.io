@@ -67,8 +67,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
           <li class="nav-item">
             <router-link to="/dashboard" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -77,27 +75,34 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </p>
             </router-link>
           </li>
-     
 
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-cogs"></i>
+          <li class="nav-item">
+            <router-link to="/users" class="nav-link">
+            <i class="nav-icon fas fa-users"></i>
               <p>
-                Management
-                <i class="right fas fa-angle-left"></i>
+                Researchers
               </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <router-link to="/users" class="nav-link">
-                  <i class="fas fa-users"></i>
-                  <p>Researchers</p>
-                </router-link>
-              </li>
-             
-            </ul>
+            </router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/publications" class="nav-link">
+            <i class="nav-icon fas fa-newspaper" area-hidden="true"></i>
+              <p>
+                Publications
+              </p>
+            </router-link>
           </li>
 
+          <li class="nav-item">
+            <router-link to="/awards" class="nav-link">
+            <i class="nav-icon fas fa-trophy" area-hidden="true"></i>
+              <p>
+                Awards
+              </p>
+            </router-link>
+          </li>
+         
+          
           <li class="nav-item">
             <router-link to="/profile" class="nav-link">
               <i class="nav-icon fas fa-user"></i>

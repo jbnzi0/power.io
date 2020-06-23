@@ -20,3 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('user', 'API\UserController');
+Route::apiResource('publications', 'PublicationController');
+Route::apiResource('awards', 'AwardController');
+
+//créer des routes pour les appels liés

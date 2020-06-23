@@ -17,6 +17,8 @@ class CreateAwardTable extends Migration
             $table->id();
             $table->string("type");
             $table->string("title");
+            $table->longText("notes");
+            $table->longText("sponsor");
             $table->timestamps();
         });
     }
