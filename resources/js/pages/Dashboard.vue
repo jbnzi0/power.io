@@ -1,7 +1,8 @@
 <template>
     <div class="container">
+       <Upbar></Upbar>
+        <Navbar></Navbar>
       <div class="container-fluid">
-        <!-- Small boxes (Stat box) -->
         <div class="row">
           <div class="col-lg-3 col-6">
             <!-- small box -->
@@ -195,7 +196,6 @@
             <!-- /.card -->
           </section>
           <!-- /.Left col -->
-          <!-- right col (We are only adding the ID to make the widgets sortable)-->
           <section class="col-lg-5 connectedSortable ui-sortable">
 
             <!-- /.card -->
@@ -250,7 +250,14 @@
 </template>
 
 <script>
+    import Navbar from '../components/Navbar.vue'
+    import Upbar from '../components/UpBar.vue'
+
     export default {
+        components:{
+            Navbar,
+            Upbar
+        },
         mounted() {
             console.log('Component mounted.')
         }

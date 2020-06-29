@@ -1916,277 +1916,9 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Dashboard.vue?vue&type=script&lang=js&":
-/*!***************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Dashboard.vue?vue&type=script&lang=js& ***!
-  \***************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {
-    console.log('Component mounted.');
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/crud/Awards.vue?vue&type=script&lang=js&":
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Navbar.vue?vue&type=script&lang=js&":
 /*!*****************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/crud/Awards.vue?vue&type=script&lang=js& ***!
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Navbar.vue?vue&type=script&lang=js& ***!
   \*****************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -2295,23 +2027,480 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'dashbar',
+  data: function data() {
+    return {
+      csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+    };
+  },
+  methods: {
+    logout: function logout() {
+      axios.post('logout').then(function (responsse) {
+        if (response.status === 302 || 401) console.log('logout');else console.error('error');
+      })["catch"](function (error) {
+        console.error(error);
+      });
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/UpBar.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/UpBar.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Dashboard.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Dashboard.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_Navbar_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/Navbar.vue */ "./resources/js/components/Navbar.vue");
+/* harmony import */ var _components_UpBar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/UpBar.vue */ "./resources/js/components/UpBar.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    Navbar: _components_Navbar_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    Upbar: _components_UpBar_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  mounted: function mounted() {
+    console.log('Component mounted.');
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/crud/Awards.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/crud/Awards.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_Navbar_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/Navbar.vue */ "./resources/js/components/Navbar.vue");
+/* harmony import */ var _components_UpBar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/UpBar.vue */ "./resources/js/components/UpBar.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    Navbar: _components_Navbar_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    Upbar: _components_UpBar_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
   data: function data() {
     return {
       editMode: false,
@@ -2409,6 +2598,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_Navbar_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/Navbar.vue */ "./resources/js/components/Navbar.vue");
+/* harmony import */ var _components_UpBar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/UpBar.vue */ "./resources/js/components/UpBar.vue");
 //
 //
 //
@@ -2510,7 +2701,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    Navbar: _components_Navbar_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    Upbar: _components_UpBar_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
   data: function data() {
     return {
       editMode: false,
@@ -2607,6 +2806,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_Navbar_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/Navbar.vue */ "./resources/js/components/Navbar.vue");
+/* harmony import */ var _components_UpBar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/UpBar.vue */ "./resources/js/components/UpBar.vue");
 //
 //
 //
@@ -2740,7 +2941,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    Navbar: _components_Navbar_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    Upbar: _components_UpBar_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
   data: function data() {
     return {
       editMode: false,
@@ -42569,10 +42778,242 @@ AlertSuccess_component.options.__file = "AlertSuccess.vue"
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Dashboard.vue?vue&type=template&id=82704d4a&":
-/*!*******************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Dashboard.vue?vue&type=template&id=82704d4a& ***!
-  \*******************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Navbar.vue?vue&type=template&id=6dde423b&":
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Navbar.vue?vue&type=template&id=6dde423b& ***!
+  \*********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c(
+      "aside",
+      { staticClass: "main-sidebar sidebar-dark-primary elevation-4" },
+      [
+        _vm._m(0),
+        _vm._v(" "),
+        _c("div", { staticClass: "sidebar" }, [
+          _c("div", { staticClass: "user-panel mt-3 pb-3 mb-3 d-flex" }, [
+            _vm._m(1),
+            _vm._v(" "),
+            _c("div", { staticClass: "info" }, [
+              _c("a", { staticClass: "d-block", attrs: { href: "#" } }, [
+                _vm._v(" " + _vm._s(_vm.name))
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("nav", { staticClass: "mt-2" }, [
+            _c(
+              "ul",
+              {
+                staticClass: "nav nav-pills nav-sidebar flex-column",
+                attrs: {
+                  "data-widget": "treeview",
+                  role: "menu",
+                  "data-accordion": "false"
+                }
+              },
+              [
+                _c(
+                  "li",
+                  { staticClass: "nav-item" },
+                  [
+                    _c(
+                      "router-link",
+                      { staticClass: "nav-link", attrs: { to: "/dashboard" } },
+                      [
+                        _c("i", {
+                          staticClass: "nav-icon fas fa-tachometer-alt"
+                        }),
+                        _vm._v(" "),
+                        _c("p", [
+                          _vm._v("\n              Dashboard\n            ")
+                        ])
+                      ]
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  { staticClass: "nav-item" },
+                  [
+                    _c(
+                      "router-link",
+                      { staticClass: "nav-link", attrs: { to: "/users" } },
+                      [
+                        _c("i", { staticClass: "nav-icon fas fa-users" }),
+                        _vm._v(" "),
+                        _c("p", [
+                          _vm._v("\n              Researchers\n            ")
+                        ])
+                      ]
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  { staticClass: "nav-item" },
+                  [
+                    _c(
+                      "router-link",
+                      {
+                        staticClass: "nav-link",
+                        attrs: { to: "/publications" }
+                      },
+                      [
+                        _c("i", {
+                          staticClass: "nav-icon fas fa-newspaper",
+                          attrs: { "area-hidden": "true" }
+                        }),
+                        _vm._v(" "),
+                        _c("p", [
+                          _vm._v("\n              Publications\n            ")
+                        ])
+                      ]
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  { staticClass: "nav-item" },
+                  [
+                    _c(
+                      "router-link",
+                      { staticClass: "nav-link", attrs: { to: "/awards" } },
+                      [
+                        _c("i", {
+                          staticClass: "nav-icon fas fa-trophy",
+                          attrs: { "area-hidden": "true" }
+                        }),
+                        _vm._v(" "),
+                        _c("p", [
+                          _vm._v("\n              Awards\n            ")
+                        ])
+                      ]
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  { staticClass: "nav-item" },
+                  [
+                    _c(
+                      "router-link",
+                      { staticClass: "nav-link", attrs: { to: "#" } },
+                      [
+                        _c("i", { staticClass: "nav-icon fas fa-user" }),
+                        _vm._v(" "),
+                        _c("p", [
+                          _vm._v("\n              Profile\n            ")
+                        ])
+                      ]
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  { staticClass: "nav-item" },
+                  [
+                    _c(
+                      "router-link",
+                      { staticClass: "nav-link", attrs: { to: "/home" } },
+                      [
+                        _c("i", {
+                          staticClass: "nav-icon fas fa-home",
+                          attrs: { "area-hidden": "true" }
+                        }),
+                        _vm._v(" "),
+                        _c("p", [_vm._v("\n              Home\n            ")])
+                      ]
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "router-link",
+                  {
+                    staticClass: "nav-link",
+                    attrs: { to: "/home" },
+                    on: {
+                      click: function($event) {
+                        $event.preventDefault()
+                        return _vm.logout($event)
+                      }
+                    }
+                  },
+                  [
+                    _c("i", { staticClass: "nav-icon fas fa-power-off" }),
+                    _vm._v("\n          Logout\n      ")
+                  ]
+                )
+              ],
+              1
+            )
+          ])
+        ])
+      ]
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("a", { staticClass: "brand-link", attrs: { href: "#" } }, [
+      _c("img", {
+        staticClass: "brand-image img-circle elevation-3",
+        staticStyle: { opacity: ".8" },
+        attrs: { src: "/img/logo.png", alt: "Powerio logo" }
+      }),
+      _vm._v(" "),
+      _c("span", { staticClass: "brand-text font-weight-light" }, [
+        _vm._v("Power.io")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "image" }, [
+      _c("img", {
+        staticClass: "img-circle elevation-2",
+        attrs: { src: "/img/pp.jpg", alt: "Cobra Bubbles" }
+      })
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/UpBar.vue?vue&type=template&id=5770a81d&":
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/UpBar.vue?vue&type=template&id=5770a81d& ***!
+  \********************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -42591,534 +43032,1117 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "container-fluid" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-lg-3 col-6" }, [
-            _c("div", { staticClass: "small-box bg-info" }, [
-              _c("div", { staticClass: "inner" }, [
-                _c("h3", [_vm._v("3")]),
-                _vm._v(" "),
-                _c("p", [_vm._v("Ongoing Projects")])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "icon" }, [
-                _c("i", { staticClass: "ion ion-bag" })
-              ]),
-              _vm._v(" "),
+    return _c("div", [
+      _c(
+        "nav",
+        {
+          staticClass:
+            "main-header ml-0 navbar navbar-expand navbar-white navbar-light"
+        },
+        [
+          _c("ul", { staticClass: "navbar-nav" }, [
+            _c("li", { staticClass: "nav-item" }, [
               _c(
                 "a",
-                { staticClass: "small-box-footer", attrs: { href: "#" } },
-                [
-                  _vm._v("More info "),
-                  _c("i", { staticClass: "fas fa-arrow-circle-right" })
-                ]
+                {
+                  staticClass: "nav-link",
+                  attrs: {
+                    "data-widget": "pushmenu",
+                    href: "#",
+                    role: "button"
+                  }
+                },
+                [_c("i", { staticClass: "fas fa-bars" })]
               )
             ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-lg-3 col-6" }, [
-            _c("div", { staticClass: "small-box bg-success" }, [
-              _c("div", { staticClass: "inner" }, [
-                _c("h3", [_vm._v("0")]),
-                _vm._v(" "),
-                _c("p", [_vm._v("Awards")])
-              ]),
+          _c("form", { staticClass: "form-inline ml-3" }, [
+            _c("div", { staticClass: "input-group input-group-sm" }, [
+              _c("input", {
+                staticClass: "form-control form-control-navbar",
+                attrs: {
+                  type: "search",
+                  placeholder: "Search",
+                  "aria-label": "Search"
+                }
+              }),
               _vm._v(" "),
-              _c("div", { staticClass: "icon" }, [
-                _c("i", { staticClass: "ion ion-stats-bars" })
-              ]),
-              _vm._v(" "),
-              _c(
-                "a",
-                { staticClass: "small-box-footer", attrs: { href: "#" } },
-                [
-                  _vm._v("More info "),
-                  _c("i", { staticClass: "fas fa-arrow-circle-right" })
-                ]
-              )
+              _c("div", { staticClass: "input-group-append" }, [
+                _c(
+                  "button",
+                  { staticClass: "btn btn-navbar", attrs: { type: "submit" } },
+                  [_c("i", { staticClass: "fas fa-search" })]
+                )
+              ])
             ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-3 col-6" }, [
-            _c("div", { staticClass: "small-box bg-warning" }, [
-              _c("div", { staticClass: "inner" }, [
-                _c("h3", [_vm._v("5")]),
-                _vm._v(" "),
-                _c("p", [_vm._v("Publications")])
-              ]),
+          ])
+        ]
+      )
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Dashboard.vue?vue&type=template&id=82704d4a&":
+/*!*******************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Dashboard.vue?vue&type=template&id=82704d4a& ***!
+  \*******************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "container" },
+    [_c("Upbar"), _vm._v(" "), _c("Navbar"), _vm._v(" "), _vm._m(0)],
+    1
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container-fluid" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-lg-3 col-6" }, [
+          _c("div", { staticClass: "small-box bg-info" }, [
+            _c("div", { staticClass: "inner" }, [
+              _c("h3", [_vm._v("3")]),
               _vm._v(" "),
-              _c("div", { staticClass: "icon" }, [
-                _c("i", { staticClass: "ion ion-person-add" })
-              ]),
-              _vm._v(" "),
-              _c(
-                "a",
-                { staticClass: "small-box-footer", attrs: { href: "#" } },
-                [
-                  _vm._v("More info "),
-                  _c("i", { staticClass: "fas fa-arrow-circle-right" })
-                ]
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-3 col-6" }, [
-            _c("div", { staticClass: "small-box bg-danger" }, [
-              _c("div", { staticClass: "inner" }, [
-                _c("h3", [_vm._v("20")]),
-                _vm._v(" "),
-                _c("p", [_vm._v("Opensource contributions")])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "icon" }, [
-                _c("i", { staticClass: "ion ion-pie-graph" })
-              ]),
-              _vm._v(" "),
-              _c(
-                "a",
-                { staticClass: "small-box-footer", attrs: { href: "#" } },
-                [
-                  _vm._v("More info "),
-                  _c("i", { staticClass: "fas fa-arrow-circle-right" })
-                ]
-              )
+              _c("p", [_vm._v("Ongoing Projects")])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "icon" }, [
+              _c("i", { staticClass: "ion ion-bag" })
+            ]),
+            _vm._v(" "),
+            _c("a", { staticClass: "small-box-footer", attrs: { href: "#" } }, [
+              _vm._v("More info "),
+              _c("i", { staticClass: "fas fa-arrow-circle-right" })
             ])
           ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "row" }, [
-          _c(
-            "section",
-            { staticClass: "col-lg-7 connectedSortable ui-sortable" },
-            [
-              _c("div", { staticClass: "card" }, [
+        _c("div", { staticClass: "col-lg-3 col-6" }, [
+          _c("div", { staticClass: "small-box bg-success" }, [
+            _c("div", { staticClass: "inner" }, [
+              _c("h3", [_vm._v("0")]),
+              _vm._v(" "),
+              _c("p", [_vm._v("Awards")])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "icon" }, [
+              _c("i", { staticClass: "ion ion-stats-bars" })
+            ]),
+            _vm._v(" "),
+            _c("a", { staticClass: "small-box-footer", attrs: { href: "#" } }, [
+              _vm._v("More info "),
+              _c("i", { staticClass: "fas fa-arrow-circle-right" })
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-lg-3 col-6" }, [
+          _c("div", { staticClass: "small-box bg-warning" }, [
+            _c("div", { staticClass: "inner" }, [
+              _c("h3", [_vm._v("5")]),
+              _vm._v(" "),
+              _c("p", [_vm._v("Publications")])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "icon" }, [
+              _c("i", { staticClass: "ion ion-person-add" })
+            ]),
+            _vm._v(" "),
+            _c("a", { staticClass: "small-box-footer", attrs: { href: "#" } }, [
+              _vm._v("More info "),
+              _c("i", { staticClass: "fas fa-arrow-circle-right" })
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-lg-3 col-6" }, [
+          _c("div", { staticClass: "small-box bg-danger" }, [
+            _c("div", { staticClass: "inner" }, [
+              _c("h3", [_vm._v("20")]),
+              _vm._v(" "),
+              _c("p", [_vm._v("Opensource contributions")])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "icon" }, [
+              _c("i", { staticClass: "ion ion-pie-graph" })
+            ]),
+            _vm._v(" "),
+            _c("a", { staticClass: "small-box-footer", attrs: { href: "#" } }, [
+              _vm._v("More info "),
+              _c("i", { staticClass: "fas fa-arrow-circle-right" })
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c(
+          "section",
+          { staticClass: "col-lg-7 connectedSortable ui-sortable" },
+          [
+            _c("div", { staticClass: "card" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "card-header ui-sortable-handle",
+                  staticStyle: { cursor: "move" }
+                },
+                [
+                  _c("h3", { staticClass: "card-title" }, [
+                    _c("i", { staticClass: "ion ion-clipboard mr-1" }),
+                    _vm._v("\n              To Do List\n            ")
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-tools" })
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
                 _c(
-                  "div",
+                  "ul",
                   {
-                    staticClass: "card-header ui-sortable-handle",
-                    staticStyle: { cursor: "move" }
+                    staticClass: "todo-list ui-sortable",
+                    attrs: { "data-widget": "todo-list" }
                   },
                   [
-                    _c("h3", { staticClass: "card-title" }, [
-                      _c("i", { staticClass: "ion ion-clipboard mr-1" }),
-                      _vm._v("\n              To Do List\n            ")
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "card-tools" })
-                  ]
-                ),
-                _vm._v(" "),
-                _c("div", { staticClass: "card-body" }, [
-                  _c(
-                    "ul",
-                    {
-                      staticClass: "todo-list ui-sortable",
-                      attrs: { "data-widget": "todo-list" }
-                    },
-                    [
-                      _c("li", [
-                        _c(
-                          "span",
-                          { staticClass: "handle ui-sortable-handle" },
-                          [
-                            _c("i", { staticClass: "fas fa-ellipsis-v" }),
-                            _vm._v(" "),
-                            _c("i", { staticClass: "fas fa-ellipsis-v" })
-                          ]
-                        ),
+                    _c("li", [
+                      _c("span", { staticClass: "handle ui-sortable-handle" }, [
+                        _c("i", { staticClass: "fas fa-ellipsis-v" }),
                         _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "icheck-primary d-inline ml-2" },
-                          [
-                            _c("input", {
-                              attrs: {
-                                type: "checkbox",
-                                value: "",
-                                name: "todo1",
-                                id: "todoCheck1"
-                              }
-                            }),
-                            _vm._v(" "),
-                            _c("label", { attrs: { for: "todoCheck1" } })
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "text" }, [
-                          _vm._v("Work on Powerio mock-up")
-                        ]),
-                        _vm._v(" "),
-                        _c("small", { staticClass: "badge badge-danger" }, [
-                          _c("i", { staticClass: "far fa-clock" }),
-                          _vm._v(" 2 hours")
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "tools" }, [
-                          _c("i", { staticClass: "fas fa-edit" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "fas fa-trash-o" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("li", { staticClass: "done" }, [
-                        _c(
-                          "span",
-                          { staticClass: "handle ui-sortable-handle" },
-                          [
-                            _c("i", { staticClass: "fas fa-ellipsis-v" }),
-                            _vm._v(" "),
-                            _c("i", { staticClass: "fas fa-ellipsis-v" })
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "icheck-primary d-inline ml-2" },
-                          [
-                            _c("input", {
-                              attrs: {
-                                type: "checkbox",
-                                value: "",
-                                name: "todo2",
-                                id: "todoCheck2",
-                                checked: ""
-                              }
-                            }),
-                            _vm._v(" "),
-                            _c("label", { attrs: { for: "todoCheck2" } })
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "text" }, [
-                          _vm._v("Create Calendar")
-                        ]),
-                        _vm._v(" "),
-                        _c("small", { staticClass: "badge badge-info" }, [
-                          _c("i", { staticClass: "far fa-clock" }),
-                          _vm._v(" 4 hours")
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "tools" }, [
-                          _c("i", { staticClass: "fas fa-edit" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "fas fa-trash-o" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _c(
-                          "span",
-                          { staticClass: "handle ui-sortable-handle" },
-                          [
-                            _c("i", { staticClass: "fas fa-ellipsis-v" }),
-                            _vm._v(" "),
-                            _c("i", { staticClass: "fas fa-ellipsis-v" })
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "icheck-primary d-inline ml-2" },
-                          [
-                            _c("input", {
-                              attrs: {
-                                type: "checkbox",
-                                value: "",
-                                name: "todo3",
-                                id: "todoCheck3"
-                              }
-                            }),
-                            _vm._v(" "),
-                            _c("label", { attrs: { for: "todoCheck3" } })
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "text" }, [
-                          _vm._v("Design the other pages")
-                        ]),
-                        _vm._v(" "),
-                        _c("small", { staticClass: "badge badge-warning" }, [
-                          _c("i", { staticClass: "far fa-clock" }),
-                          _vm._v(" 1 day")
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "tools" }, [
-                          _c("i", { staticClass: "fas fa-edit" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "fas fa-trash-o" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _c(
-                          "span",
-                          { staticClass: "handle ui-sortable-handle" },
-                          [
-                            _c("i", { staticClass: "fas fa-ellipsis-v" }),
-                            _vm._v(" "),
-                            _c("i", { staticClass: "fas fa-ellipsis-v" })
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "icheck-primary d-inline ml-2" },
-                          [
-                            _c("input", {
-                              attrs: {
-                                type: "checkbox",
-                                value: "",
-                                name: "todo4",
-                                id: "todoCheck4"
-                              }
-                            }),
-                            _vm._v(" "),
-                            _c("label", { attrs: { for: "todoCheck4" } })
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "text" }, [
-                          _vm._v("Optimize Split codes")
-                        ]),
-                        _vm._v(" "),
-                        _c("small", { staticClass: "badge badge-success" }, [
-                          _c("i", { staticClass: "far fa-clock" }),
-                          _vm._v(" 3 days")
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "tools" }, [
-                          _c("i", { staticClass: "fas fa-edit" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "fas fa-trash-o" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _c(
-                          "span",
-                          { staticClass: "handle ui-sortable-handle" },
-                          [
-                            _c("i", { staticClass: "fas fa-ellipsis-v" }),
-                            _vm._v(" "),
-                            _c("i", { staticClass: "fas fa-ellipsis-v" })
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "icheck-primary d-inline ml-2" },
-                          [
-                            _c("input", {
-                              attrs: {
-                                type: "checkbox",
-                                value: "",
-                                name: "todo5",
-                                id: "todoCheck5"
-                              }
-                            }),
-                            _vm._v(" "),
-                            _c("label", { attrs: { for: "todoCheck5" } })
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "text" }, [
-                          _vm._v("Check your messages and notifications")
-                        ]),
-                        _vm._v(" "),
-                        _c("small", { staticClass: "badge badge-primary" }, [
-                          _c("i", { staticClass: "far fa-clock" }),
-                          _vm._v(" 1 week")
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "tools" }, [
-                          _c("i", { staticClass: "fas fa-edit" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "fas fa-trash-o" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _c(
-                          "span",
-                          { staticClass: "handle ui-sortable-handle" },
-                          [
-                            _c("i", { staticClass: "fas fa-ellipsis-v" }),
-                            _vm._v(" "),
-                            _c("i", { staticClass: "fas fa-ellipsis-v" })
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "icheck-primary d-inline ml-2" },
-                          [
-                            _c("input", {
-                              attrs: {
-                                type: "checkbox",
-                                value: "",
-                                name: "todo6",
-                                id: "todoCheck6"
-                              }
-                            }),
-                            _vm._v(" "),
-                            _c("label", { attrs: { for: "todoCheck6" } })
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "text" }, [
-                          _vm._v("Drink water")
-                        ]),
-                        _vm._v(" "),
-                        _c("small", { staticClass: "badge badge-secondary" }, [
-                          _c("i", { staticClass: "far fa-clock" }),
-                          _vm._v(" 1 min ")
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "tools" }, [
-                          _c("i", { staticClass: "fas fa-edit" }),
-                          _vm._v(" "),
-                          _c("i", { staticClass: "fas fa-trash-o" })
-                        ])
-                      ])
-                    ]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "card-footer clearfix" }, [
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-info float-right",
-                      attrs: { type: "button" }
-                    },
-                    [
-                      _c("i", { staticClass: "fas fa-plus" }),
-                      _vm._v(" Add item")
-                    ]
-                  )
-                ])
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "section",
-            { staticClass: "col-lg-5 connectedSortable ui-sortable" },
-            [
-              _c("div", { staticClass: "card bg-gradient-success" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass: "card-header border-0 ui-sortable-handle",
-                    staticStyle: { cursor: "move" }
-                  },
-                  [
-                    _c("h3", { staticClass: "card-title" }, [
-                      _c("i", { staticClass: "far fa-calendar-alt" }),
-                      _vm._v("\n              Calendar\n            ")
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "card-tools" }, [
-                      _c("div", { staticClass: "btn-group" }, [
-                        _c(
-                          "button",
-                          {
-                            staticClass:
-                              "btn btn-success btn-sm dropdown-toggle",
-                            attrs: { type: "button", "data-toggle": "dropdown" }
-                          },
-                          [_c("i", { staticClass: "fas fa-bars" })]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass: "dropdown-menu float-right",
-                            attrs: { role: "menu" }
-                          },
-                          [
-                            _c(
-                              "a",
-                              {
-                                staticClass: "dropdown-item",
-                                attrs: { href: "#" }
-                              },
-                              [_vm._v("Add new event")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "a",
-                              {
-                                staticClass: "dropdown-item",
-                                attrs: { href: "#" }
-                              },
-                              [_vm._v("Clear events")]
-                            ),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "dropdown-divider" }),
-                            _vm._v(" "),
-                            _c(
-                              "a",
-                              {
-                                staticClass: "dropdown-item",
-                                attrs: { href: "#" }
-                              },
-                              [_vm._v("View calendar")]
-                            )
-                          ]
-                        )
+                        _c("i", { staticClass: "fas fa-ellipsis-v" })
                       ]),
                       _vm._v(" "),
                       _c(
+                        "div",
+                        { staticClass: "icheck-primary d-inline ml-2" },
+                        [
+                          _c("input", {
+                            attrs: {
+                              type: "checkbox",
+                              value: "",
+                              name: "todo1",
+                              id: "todoCheck1"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("label", { attrs: { for: "todoCheck1" } })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "text" }, [
+                        _vm._v("Work on Powerio mock-up")
+                      ]),
+                      _vm._v(" "),
+                      _c("small", { staticClass: "badge badge-danger" }, [
+                        _c("i", { staticClass: "far fa-clock" }),
+                        _vm._v(" 2 hours")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "tools" }, [
+                        _c("i", { staticClass: "fas fa-edit" }),
+                        _vm._v(" "),
+                        _c("i", { staticClass: "fas fa-trash-o" })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("li", { staticClass: "done" }, [
+                      _c("span", { staticClass: "handle ui-sortable-handle" }, [
+                        _c("i", { staticClass: "fas fa-ellipsis-v" }),
+                        _vm._v(" "),
+                        _c("i", { staticClass: "fas fa-ellipsis-v" })
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "icheck-primary d-inline ml-2" },
+                        [
+                          _c("input", {
+                            attrs: {
+                              type: "checkbox",
+                              value: "",
+                              name: "todo2",
+                              id: "todoCheck2",
+                              checked: ""
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("label", { attrs: { for: "todoCheck2" } })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "text" }, [
+                        _vm._v("Create Calendar")
+                      ]),
+                      _vm._v(" "),
+                      _c("small", { staticClass: "badge badge-info" }, [
+                        _c("i", { staticClass: "far fa-clock" }),
+                        _vm._v(" 4 hours")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "tools" }, [
+                        _c("i", { staticClass: "fas fa-edit" }),
+                        _vm._v(" "),
+                        _c("i", { staticClass: "fas fa-trash-o" })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("span", { staticClass: "handle ui-sortable-handle" }, [
+                        _c("i", { staticClass: "fas fa-ellipsis-v" }),
+                        _vm._v(" "),
+                        _c("i", { staticClass: "fas fa-ellipsis-v" })
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "icheck-primary d-inline ml-2" },
+                        [
+                          _c("input", {
+                            attrs: {
+                              type: "checkbox",
+                              value: "",
+                              name: "todo3",
+                              id: "todoCheck3"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("label", { attrs: { for: "todoCheck3" } })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "text" }, [
+                        _vm._v("Design the other pages")
+                      ]),
+                      _vm._v(" "),
+                      _c("small", { staticClass: "badge badge-warning" }, [
+                        _c("i", { staticClass: "far fa-clock" }),
+                        _vm._v(" 1 day")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "tools" }, [
+                        _c("i", { staticClass: "fas fa-edit" }),
+                        _vm._v(" "),
+                        _c("i", { staticClass: "fas fa-trash-o" })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("span", { staticClass: "handle ui-sortable-handle" }, [
+                        _c("i", { staticClass: "fas fa-ellipsis-v" }),
+                        _vm._v(" "),
+                        _c("i", { staticClass: "fas fa-ellipsis-v" })
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "icheck-primary d-inline ml-2" },
+                        [
+                          _c("input", {
+                            attrs: {
+                              type: "checkbox",
+                              value: "",
+                              name: "todo4",
+                              id: "todoCheck4"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("label", { attrs: { for: "todoCheck4" } })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "text" }, [
+                        _vm._v("Optimize Split codes")
+                      ]),
+                      _vm._v(" "),
+                      _c("small", { staticClass: "badge badge-success" }, [
+                        _c("i", { staticClass: "far fa-clock" }),
+                        _vm._v(" 3 days")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "tools" }, [
+                        _c("i", { staticClass: "fas fa-edit" }),
+                        _vm._v(" "),
+                        _c("i", { staticClass: "fas fa-trash-o" })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("span", { staticClass: "handle ui-sortable-handle" }, [
+                        _c("i", { staticClass: "fas fa-ellipsis-v" }),
+                        _vm._v(" "),
+                        _c("i", { staticClass: "fas fa-ellipsis-v" })
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "icheck-primary d-inline ml-2" },
+                        [
+                          _c("input", {
+                            attrs: {
+                              type: "checkbox",
+                              value: "",
+                              name: "todo5",
+                              id: "todoCheck5"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("label", { attrs: { for: "todoCheck5" } })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "text" }, [
+                        _vm._v("Check your messages and notifications")
+                      ]),
+                      _vm._v(" "),
+                      _c("small", { staticClass: "badge badge-primary" }, [
+                        _c("i", { staticClass: "far fa-clock" }),
+                        _vm._v(" 1 week")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "tools" }, [
+                        _c("i", { staticClass: "fas fa-edit" }),
+                        _vm._v(" "),
+                        _c("i", { staticClass: "fas fa-trash-o" })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("span", { staticClass: "handle ui-sortable-handle" }, [
+                        _c("i", { staticClass: "fas fa-ellipsis-v" }),
+                        _vm._v(" "),
+                        _c("i", { staticClass: "fas fa-ellipsis-v" })
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "icheck-primary d-inline ml-2" },
+                        [
+                          _c("input", {
+                            attrs: {
+                              type: "checkbox",
+                              value: "",
+                              name: "todo6",
+                              id: "todoCheck6"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("label", { attrs: { for: "todoCheck6" } })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "text" }, [
+                        _vm._v("Drink water")
+                      ]),
+                      _vm._v(" "),
+                      _c("small", { staticClass: "badge badge-secondary" }, [
+                        _c("i", { staticClass: "far fa-clock" }),
+                        _vm._v(" 1 min ")
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "tools" }, [
+                        _c("i", { staticClass: "fas fa-edit" }),
+                        _vm._v(" "),
+                        _c("i", { staticClass: "fas fa-trash-o" })
+                      ])
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-footer clearfix" }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-info float-right",
+                    attrs: { type: "button" }
+                  },
+                  [_c("i", { staticClass: "fas fa-plus" }), _vm._v(" Add item")]
+                )
+              ])
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "section",
+          { staticClass: "col-lg-5 connectedSortable ui-sortable" },
+          [
+            _c("div", { staticClass: "card bg-gradient-success" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "card-header border-0 ui-sortable-handle",
+                  staticStyle: { cursor: "move" }
+                },
+                [
+                  _c("h3", { staticClass: "card-title" }, [
+                    _c("i", { staticClass: "far fa-calendar-alt" }),
+                    _vm._v("\n              Calendar\n            ")
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-tools" }, [
+                    _c("div", { staticClass: "btn-group" }, [
+                      _c(
                         "button",
                         {
-                          staticClass: "btn btn-success btn-sm",
-                          attrs: {
-                            type: "button",
-                            "data-card-widget": "collapse"
-                          }
+                          staticClass: "btn btn-success btn-sm dropdown-toggle",
+                          attrs: { type: "button", "data-toggle": "dropdown" }
                         },
-                        [_c("i", { staticClass: "fas fa-minus" })]
+                        [_c("i", { staticClass: "fas fa-bars" })]
                       ),
                       _vm._v(" "),
                       _c(
-                        "button",
-                        {
-                          staticClass: "btn btn-success btn-sm",
-                          attrs: {
-                            type: "button",
-                            "data-card-widget": "remove"
-                          }
-                        },
-                        [_c("i", { staticClass: "fas fa-times" })]
-                      )
-                    ])
-                  ]
-                ),
-                _vm._v(" "),
-                _c("div", { staticClass: "card-body pt-0" }, [
-                  _c(
-                    "div",
-                    {
-                      staticStyle: { width: "100%" },
-                      attrs: { id: "calendar" }
-                    },
-                    [
-                      _c(
                         "div",
                         {
-                          staticClass:
-                            "bootstrap-datetimepicker-widget usetwentyfour"
+                          staticClass: "dropdown-menu float-right",
+                          attrs: { role: "menu" }
                         },
                         [
-                          _c("ul", { staticClass: "list-unstyled" }, [
-                            _c("li", { staticClass: "show" }, [
-                              _c("div", { staticClass: "datepicker" }, [
-                                _c("div", { staticClass: "datepicker-days" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "dropdown-item",
+                              attrs: { href: "#" }
+                            },
+                            [_vm._v("Add new event")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "a",
+                            {
+                              staticClass: "dropdown-item",
+                              attrs: { href: "#" }
+                            },
+                            [_vm._v("Clear events")]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "dropdown-divider" }),
+                          _vm._v(" "),
+                          _c(
+                            "a",
+                            {
+                              staticClass: "dropdown-item",
+                              attrs: { href: "#" }
+                            },
+                            [_vm._v("View calendar")]
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-success btn-sm",
+                        attrs: {
+                          type: "button",
+                          "data-card-widget": "collapse"
+                        }
+                      },
+                      [_c("i", { staticClass: "fas fa-minus" })]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-success btn-sm",
+                        attrs: { type: "button", "data-card-widget": "remove" }
+                      },
+                      [_c("i", { staticClass: "fas fa-times" })]
+                    )
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body pt-0" }, [
+                _c(
+                  "div",
+                  { staticStyle: { width: "100%" }, attrs: { id: "calendar" } },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "bootstrap-datetimepicker-widget usetwentyfour"
+                      },
+                      [
+                        _c("ul", { staticClass: "list-unstyled" }, [
+                          _c("li", { staticClass: "show" }, [
+                            _c("div", { staticClass: "datepicker" }, [
+                              _c("div", { staticClass: "datepicker-days" }, [
+                                _c("table", { staticClass: "table table-sm" }, [
+                                  _c("thead", [
+                                    _c("tr", [
+                                      _c(
+                                        "th",
+                                        {
+                                          staticClass: "prev",
+                                          attrs: { "data-action": "previous" }
+                                        },
+                                        [
+                                          _c("span", {
+                                            staticClass: "fa fa-chevron-left",
+                                            attrs: { title: "Previous Month" }
+                                          })
+                                        ]
+                                      ),
+                                      _c(
+                                        "th",
+                                        {
+                                          staticClass: "picker-switch",
+                                          attrs: {
+                                            "data-action": "pickerSwitch",
+                                            colspan: "5",
+                                            title: "Select Month"
+                                          }
+                                        },
+                                        [_vm._v("May 2020")]
+                                      ),
+                                      _c(
+                                        "th",
+                                        {
+                                          staticClass: "next",
+                                          attrs: { "data-action": "next" }
+                                        },
+                                        [
+                                          _c("span", {
+                                            staticClass: "fa fa-chevron-right",
+                                            attrs: { title: "Next Month" }
+                                          })
+                                        ]
+                                      )
+                                    ]),
+                                    _c("tr", [
+                                      _c("th", { staticClass: "dow" }, [
+                                        _vm._v("Su")
+                                      ]),
+                                      _c("th", { staticClass: "dow" }, [
+                                        _vm._v("Mo")
+                                      ]),
+                                      _c("th", { staticClass: "dow" }, [
+                                        _vm._v("Tu")
+                                      ]),
+                                      _c("th", { staticClass: "dow" }, [
+                                        _vm._v("We")
+                                      ]),
+                                      _c("th", { staticClass: "dow" }, [
+                                        _vm._v("Th")
+                                      ]),
+                                      _c("th", { staticClass: "dow" }, [
+                                        _vm._v("Fr")
+                                      ]),
+                                      _c("th", { staticClass: "dow" }, [
+                                        _vm._v("Sa")
+                                      ])
+                                    ])
+                                  ]),
+                                  _c("tbody", [
+                                    _c("tr", [
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day old weekend",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "04/26/2020"
+                                          }
+                                        },
+                                        [_vm._v("26")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day old",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "04/27/2020"
+                                          }
+                                        },
+                                        [_vm._v("27")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day old",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "04/28/2020"
+                                          }
+                                        },
+                                        [_vm._v("28")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day old",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "04/29/2020"
+                                          }
+                                        },
+                                        [_vm._v("29")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day old",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "04/30/2020"
+                                          }
+                                        },
+                                        [_vm._v("30")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "05/01/2020"
+                                          }
+                                        },
+                                        [_vm._v("1")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day weekend",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "05/02/2020"
+                                          }
+                                        },
+                                        [_vm._v("2")]
+                                      )
+                                    ]),
+                                    _c("tr", [
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day weekend",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "05/03/2020"
+                                          }
+                                        },
+                                        [_vm._v("3")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "05/04/2020"
+                                          }
+                                        },
+                                        [_vm._v("4")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "05/05/2020"
+                                          }
+                                        },
+                                        [_vm._v("5")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "05/06/2020"
+                                          }
+                                        },
+                                        [_vm._v("6")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "05/07/2020"
+                                          }
+                                        },
+                                        [_vm._v("7")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "05/08/2020"
+                                          }
+                                        },
+                                        [_vm._v("8")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day weekend",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "05/09/2020"
+                                          }
+                                        },
+                                        [_vm._v("9")]
+                                      )
+                                    ]),
+                                    _c("tr", [
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day weekend",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "05/10/2020"
+                                          }
+                                        },
+                                        [_vm._v("10")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "05/11/2020"
+                                          }
+                                        },
+                                        [_vm._v("11")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "05/12/2020"
+                                          }
+                                        },
+                                        [_vm._v("12")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "05/13/2020"
+                                          }
+                                        },
+                                        [_vm._v("13")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "05/14/2020"
+                                          }
+                                        },
+                                        [_vm._v("14")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "05/15/2020"
+                                          }
+                                        },
+                                        [_vm._v("15")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day weekend",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "05/16/2020"
+                                          }
+                                        },
+                                        [_vm._v("16")]
+                                      )
+                                    ]),
+                                    _c("tr", [
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day weekend",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "05/17/2020"
+                                          }
+                                        },
+                                        [_vm._v("17")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "05/18/2020"
+                                          }
+                                        },
+                                        [_vm._v("18")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "05/19/2020"
+                                          }
+                                        },
+                                        [_vm._v("19")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "05/20/2020"
+                                          }
+                                        },
+                                        [_vm._v("20")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "05/21/2020"
+                                          }
+                                        },
+                                        [_vm._v("21")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "05/22/2020"
+                                          }
+                                        },
+                                        [_vm._v("22")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day weekend",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "05/23/2020"
+                                          }
+                                        },
+                                        [_vm._v("23")]
+                                      )
+                                    ]),
+                                    _c("tr", [
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day weekend",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "05/24/2020"
+                                          }
+                                        },
+                                        [_vm._v("24")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day active today",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "05/25/2020"
+                                          }
+                                        },
+                                        [_vm._v("25")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "05/26/2020"
+                                          }
+                                        },
+                                        [_vm._v("26")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "05/27/2020"
+                                          }
+                                        },
+                                        [_vm._v("27")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "05/28/2020"
+                                          }
+                                        },
+                                        [_vm._v("28")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "05/29/2020"
+                                          }
+                                        },
+                                        [_vm._v("29")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day weekend",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "05/30/2020"
+                                          }
+                                        },
+                                        [_vm._v("30")]
+                                      )
+                                    ]),
+                                    _c("tr", [
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day weekend",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "05/31/2020"
+                                          }
+                                        },
+                                        [_vm._v("31")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day new",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "06/01/2020"
+                                          }
+                                        },
+                                        [_vm._v("1")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day new",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "06/02/2020"
+                                          }
+                                        },
+                                        [_vm._v("2")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day new",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "06/03/2020"
+                                          }
+                                        },
+                                        [_vm._v("3")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day new",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "06/04/2020"
+                                          }
+                                        },
+                                        [_vm._v("4")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day new",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "06/05/2020"
+                                          }
+                                        },
+                                        [_vm._v("5")]
+                                      ),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass: "day new weekend",
+                                          attrs: {
+                                            "data-action": "selectDay",
+                                            "data-day": "06/06/2020"
+                                          }
+                                        },
+                                        [_vm._v("6")]
+                                      )
+                                    ])
+                                  ])
+                                ])
+                              ]),
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "datepicker-months",
+                                  staticStyle: { display: "none" }
+                                },
+                                [
                                   _c(
                                     "table",
-                                    { staticClass: "table table-sm" },
+                                    { staticClass: "table-condensed" },
                                     [
                                       _c("thead", [
                                         _c("tr", [
@@ -43135,7 +44159,7 @@ var staticRenderFns = [
                                                 staticClass:
                                                   "fa fa-chevron-left",
                                                 attrs: {
-                                                  title: "Previous Month"
+                                                  title: "Previous Year"
                                                 }
                                               })
                                             ]
@@ -43147,10 +44171,10 @@ var staticRenderFns = [
                                               attrs: {
                                                 "data-action": "pickerSwitch",
                                                 colspan: "5",
-                                                title: "Select Month"
+                                                title: "Select Year"
                                               }
                                             },
-                                            [_vm._v("May 2020")]
+                                            [_vm._v("2020")]
                                           ),
                                           _c(
                                             "th",
@@ -43162,1160 +44186,569 @@ var staticRenderFns = [
                                               _c("span", {
                                                 staticClass:
                                                   "fa fa-chevron-right",
-                                                attrs: { title: "Next Month" }
+                                                attrs: { title: "Next Year" }
                                               })
                                             ]
                                           )
-                                        ]),
-                                        _c("tr", [
-                                          _c("th", { staticClass: "dow" }, [
-                                            _vm._v("Su")
-                                          ]),
-                                          _c("th", { staticClass: "dow" }, [
-                                            _vm._v("Mo")
-                                          ]),
-                                          _c("th", { staticClass: "dow" }, [
-                                            _vm._v("Tu")
-                                          ]),
-                                          _c("th", { staticClass: "dow" }, [
-                                            _vm._v("We")
-                                          ]),
-                                          _c("th", { staticClass: "dow" }, [
-                                            _vm._v("Th")
-                                          ]),
-                                          _c("th", { staticClass: "dow" }, [
-                                            _vm._v("Fr")
-                                          ]),
-                                          _c("th", { staticClass: "dow" }, [
-                                            _vm._v("Sa")
-                                          ])
                                         ])
                                       ]),
                                       _c("tbody", [
                                         _c("tr", [
                                           _c(
                                             "td",
-                                            {
-                                              staticClass: "day old weekend",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "04/26/2020"
-                                              }
-                                            },
-                                            [_vm._v("26")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day old",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "04/27/2020"
-                                              }
-                                            },
-                                            [_vm._v("27")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day old",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "04/28/2020"
-                                              }
-                                            },
-                                            [_vm._v("28")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day old",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "04/29/2020"
-                                              }
-                                            },
-                                            [_vm._v("29")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day old",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "04/30/2020"
-                                              }
-                                            },
-                                            [_vm._v("30")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "05/01/2020"
-                                              }
-                                            },
-                                            [_vm._v("1")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day weekend",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "05/02/2020"
-                                              }
-                                            },
-                                            [_vm._v("2")]
-                                          )
-                                        ]),
-                                        _c("tr", [
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day weekend",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "05/03/2020"
-                                              }
-                                            },
-                                            [_vm._v("3")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "05/04/2020"
-                                              }
-                                            },
-                                            [_vm._v("4")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "05/05/2020"
-                                              }
-                                            },
-                                            [_vm._v("5")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "05/06/2020"
-                                              }
-                                            },
-                                            [_vm._v("6")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "05/07/2020"
-                                              }
-                                            },
-                                            [_vm._v("7")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "05/08/2020"
-                                              }
-                                            },
-                                            [_vm._v("8")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day weekend",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "05/09/2020"
-                                              }
-                                            },
-                                            [_vm._v("9")]
-                                          )
-                                        ]),
-                                        _c("tr", [
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day weekend",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "05/10/2020"
-                                              }
-                                            },
-                                            [_vm._v("10")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "05/11/2020"
-                                              }
-                                            },
-                                            [_vm._v("11")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "05/12/2020"
-                                              }
-                                            },
-                                            [_vm._v("12")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "05/13/2020"
-                                              }
-                                            },
-                                            [_vm._v("13")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "05/14/2020"
-                                              }
-                                            },
-                                            [_vm._v("14")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "05/15/2020"
-                                              }
-                                            },
-                                            [_vm._v("15")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day weekend",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "05/16/2020"
-                                              }
-                                            },
-                                            [_vm._v("16")]
-                                          )
-                                        ]),
-                                        _c("tr", [
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day weekend",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "05/17/2020"
-                                              }
-                                            },
-                                            [_vm._v("17")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "05/18/2020"
-                                              }
-                                            },
-                                            [_vm._v("18")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "05/19/2020"
-                                              }
-                                            },
-                                            [_vm._v("19")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "05/20/2020"
-                                              }
-                                            },
-                                            [_vm._v("20")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "05/21/2020"
-                                              }
-                                            },
-                                            [_vm._v("21")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "05/22/2020"
-                                              }
-                                            },
-                                            [_vm._v("22")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day weekend",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "05/23/2020"
-                                              }
-                                            },
-                                            [_vm._v("23")]
-                                          )
-                                        ]),
-                                        _c("tr", [
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day weekend",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "05/24/2020"
-                                              }
-                                            },
-                                            [_vm._v("24")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day active today",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "05/25/2020"
-                                              }
-                                            },
-                                            [_vm._v("25")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "05/26/2020"
-                                              }
-                                            },
-                                            [_vm._v("26")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "05/27/2020"
-                                              }
-                                            },
-                                            [_vm._v("27")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "05/28/2020"
-                                              }
-                                            },
-                                            [_vm._v("28")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "05/29/2020"
-                                              }
-                                            },
-                                            [_vm._v("29")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day weekend",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "05/30/2020"
-                                              }
-                                            },
-                                            [_vm._v("30")]
-                                          )
-                                        ]),
-                                        _c("tr", [
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day weekend",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "05/31/2020"
-                                              }
-                                            },
-                                            [_vm._v("31")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day new",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "06/01/2020"
-                                              }
-                                            },
-                                            [_vm._v("1")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day new",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "06/02/2020"
-                                              }
-                                            },
-                                            [_vm._v("2")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day new",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "06/03/2020"
-                                              }
-                                            },
-                                            [_vm._v("3")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day new",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "06/04/2020"
-                                              }
-                                            },
-                                            [_vm._v("4")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day new",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "06/05/2020"
-                                              }
-                                            },
-                                            [_vm._v("5")]
-                                          ),
-                                          _c(
-                                            "td",
-                                            {
-                                              staticClass: "day new weekend",
-                                              attrs: {
-                                                "data-action": "selectDay",
-                                                "data-day": "06/06/2020"
-                                              }
-                                            },
-                                            [_vm._v("6")]
+                                            { attrs: { colspan: "7" } },
+                                            [
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "month",
+                                                  attrs: {
+                                                    "data-action": "selectMonth"
+                                                  }
+                                                },
+                                                [_vm._v("Jan")]
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "month",
+                                                  attrs: {
+                                                    "data-action": "selectMonth"
+                                                  }
+                                                },
+                                                [_vm._v("Feb")]
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "month",
+                                                  attrs: {
+                                                    "data-action": "selectMonth"
+                                                  }
+                                                },
+                                                [_vm._v("Mar")]
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "month",
+                                                  attrs: {
+                                                    "data-action": "selectMonth"
+                                                  }
+                                                },
+                                                [_vm._v("Apr")]
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "month active",
+                                                  attrs: {
+                                                    "data-action": "selectMonth"
+                                                  }
+                                                },
+                                                [_vm._v("May")]
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "month",
+                                                  attrs: {
+                                                    "data-action": "selectMonth"
+                                                  }
+                                                },
+                                                [_vm._v("Jun")]
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "month",
+                                                  attrs: {
+                                                    "data-action": "selectMonth"
+                                                  }
+                                                },
+                                                [_vm._v("Jul")]
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "month",
+                                                  attrs: {
+                                                    "data-action": "selectMonth"
+                                                  }
+                                                },
+                                                [_vm._v("Aug")]
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "month",
+                                                  attrs: {
+                                                    "data-action": "selectMonth"
+                                                  }
+                                                },
+                                                [_vm._v("Sep")]
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "month",
+                                                  attrs: {
+                                                    "data-action": "selectMonth"
+                                                  }
+                                                },
+                                                [_vm._v("Oct")]
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "month",
+                                                  attrs: {
+                                                    "data-action": "selectMonth"
+                                                  }
+                                                },
+                                                [_vm._v("Nov")]
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "month",
+                                                  attrs: {
+                                                    "data-action": "selectMonth"
+                                                  }
+                                                },
+                                                [_vm._v("Dec")]
+                                              )
+                                            ]
                                           )
                                         ])
                                       ])
                                     ]
                                   )
-                                ]),
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass: "datepicker-months",
-                                    staticStyle: { display: "none" }
-                                  },
-                                  [
-                                    _c(
-                                      "table",
-                                      { staticClass: "table-condensed" },
-                                      [
-                                        _c("thead", [
-                                          _c("tr", [
-                                            _c(
-                                              "th",
-                                              {
-                                                staticClass: "prev",
+                                ]
+                              ),
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "datepicker-years",
+                                  staticStyle: { display: "none" }
+                                },
+                                [
+                                  _c(
+                                    "table",
+                                    { staticClass: "table-condensed" },
+                                    [
+                                      _c("thead", [
+                                        _c("tr", [
+                                          _c(
+                                            "th",
+                                            {
+                                              staticClass: "prev",
+                                              attrs: {
+                                                "data-action": "previous"
+                                              }
+                                            },
+                                            [
+                                              _c("span", {
+                                                staticClass:
+                                                  "fa fa-chevron-left",
                                                 attrs: {
-                                                  "data-action": "previous"
+                                                  title: "Previous Decade"
                                                 }
-                                              },
-                                              [
-                                                _c("span", {
-                                                  staticClass:
-                                                    "fa fa-chevron-left",
-                                                  attrs: {
-                                                    title: "Previous Year"
-                                                  }
-                                                })
-                                              ]
-                                            ),
-                                            _c(
-                                              "th",
-                                              {
-                                                staticClass: "picker-switch",
-                                                attrs: {
-                                                  "data-action": "pickerSwitch",
-                                                  colspan: "5",
-                                                  title: "Select Year"
-                                                }
-                                              },
-                                              [_vm._v("2020")]
-                                            ),
-                                            _c(
-                                              "th",
-                                              {
-                                                staticClass: "next",
-                                                attrs: { "data-action": "next" }
-                                              },
-                                              [
-                                                _c("span", {
-                                                  staticClass:
-                                                    "fa fa-chevron-right",
-                                                  attrs: { title: "Next Year" }
-                                                })
-                                              ]
-                                            )
-                                          ])
-                                        ]),
-                                        _c("tbody", [
-                                          _c("tr", [
-                                            _c(
-                                              "td",
-                                              { attrs: { colspan: "7" } },
-                                              [
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "month",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectMonth"
-                                                    }
-                                                  },
-                                                  [_vm._v("Jan")]
-                                                ),
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "month",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectMonth"
-                                                    }
-                                                  },
-                                                  [_vm._v("Feb")]
-                                                ),
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "month",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectMonth"
-                                                    }
-                                                  },
-                                                  [_vm._v("Mar")]
-                                                ),
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "month",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectMonth"
-                                                    }
-                                                  },
-                                                  [_vm._v("Apr")]
-                                                ),
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "month active",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectMonth"
-                                                    }
-                                                  },
-                                                  [_vm._v("May")]
-                                                ),
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "month",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectMonth"
-                                                    }
-                                                  },
-                                                  [_vm._v("Jun")]
-                                                ),
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "month",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectMonth"
-                                                    }
-                                                  },
-                                                  [_vm._v("Jul")]
-                                                ),
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "month",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectMonth"
-                                                    }
-                                                  },
-                                                  [_vm._v("Aug")]
-                                                ),
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "month",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectMonth"
-                                                    }
-                                                  },
-                                                  [_vm._v("Sep")]
-                                                ),
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "month",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectMonth"
-                                                    }
-                                                  },
-                                                  [_vm._v("Oct")]
-                                                ),
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "month",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectMonth"
-                                                    }
-                                                  },
-                                                  [_vm._v("Nov")]
-                                                ),
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "month",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectMonth"
-                                                    }
-                                                  },
-                                                  [_vm._v("Dec")]
-                                                )
-                                              ]
-                                            )
-                                          ])
+                                              })
+                                            ]
+                                          ),
+                                          _c(
+                                            "th",
+                                            {
+                                              staticClass: "picker-switch",
+                                              attrs: {
+                                                "data-action": "pickerSwitch",
+                                                colspan: "5",
+                                                title: "Select Decade"
+                                              }
+                                            },
+                                            [_vm._v("2020-2029")]
+                                          ),
+                                          _c(
+                                            "th",
+                                            {
+                                              staticClass: "next",
+                                              attrs: { "data-action": "next" }
+                                            },
+                                            [
+                                              _c("span", {
+                                                staticClass:
+                                                  "fa fa-chevron-right",
+                                                attrs: { title: "Next Decade" }
+                                              })
+                                            ]
+                                          )
                                         ])
-                                      ]
-                                    )
-                                  ]
-                                ),
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass: "datepicker-years",
-                                    staticStyle: { display: "none" }
-                                  },
-                                  [
-                                    _c(
-                                      "table",
-                                      { staticClass: "table-condensed" },
-                                      [
-                                        _c("thead", [
-                                          _c("tr", [
-                                            _c(
-                                              "th",
-                                              {
-                                                staticClass: "prev",
-                                                attrs: {
-                                                  "data-action": "previous"
-                                                }
-                                              },
-                                              [
-                                                _c("span", {
-                                                  staticClass:
-                                                    "fa fa-chevron-left",
+                                      ]),
+                                      _c("tbody", [
+                                        _c("tr", [
+                                          _c(
+                                            "td",
+                                            { attrs: { colspan: "7" } },
+                                            [
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "year old",
                                                   attrs: {
-                                                    title: "Previous Decade"
+                                                    "data-action": "selectYear"
                                                   }
-                                                })
-                                              ]
-                                            ),
-                                            _c(
-                                              "th",
-                                              {
-                                                staticClass: "picker-switch",
-                                                attrs: {
-                                                  "data-action": "pickerSwitch",
-                                                  colspan: "5",
-                                                  title: "Select Decade"
-                                                }
-                                              },
-                                              [_vm._v("2020-2029")]
-                                            ),
-                                            _c(
-                                              "th",
-                                              {
-                                                staticClass: "next",
-                                                attrs: { "data-action": "next" }
-                                              },
-                                              [
-                                                _c("span", {
-                                                  staticClass:
-                                                    "fa fa-chevron-right",
+                                                },
+                                                [_vm._v("2019")]
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "year active",
                                                   attrs: {
-                                                    title: "Next Decade"
+                                                    "data-action": "selectYear"
                                                   }
-                                                })
-                                              ]
-                                            )
-                                          ])
-                                        ]),
-                                        _c("tbody", [
-                                          _c("tr", [
-                                            _c(
-                                              "td",
-                                              { attrs: { colspan: "7" } },
-                                              [
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "year old",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectYear"
-                                                    }
-                                                  },
-                                                  [_vm._v("2019")]
-                                                ),
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "year active",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectYear"
-                                                    }
-                                                  },
-                                                  [_vm._v("2020")]
-                                                ),
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "year",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectYear"
-                                                    }
-                                                  },
-                                                  [_vm._v("2021")]
-                                                ),
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "year",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectYear"
-                                                    }
-                                                  },
-                                                  [_vm._v("2022")]
-                                                ),
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "year",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectYear"
-                                                    }
-                                                  },
-                                                  [_vm._v("2023")]
-                                                ),
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "year",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectYear"
-                                                    }
-                                                  },
-                                                  [_vm._v("2024")]
-                                                ),
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "year",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectYear"
-                                                    }
-                                                  },
-                                                  [_vm._v("2025")]
-                                                ),
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "year",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectYear"
-                                                    }
-                                                  },
-                                                  [_vm._v("2026")]
-                                                ),
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "year",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectYear"
-                                                    }
-                                                  },
-                                                  [_vm._v("2027")]
-                                                ),
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "year",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectYear"
-                                                    }
-                                                  },
-                                                  [_vm._v("2028")]
-                                                ),
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "year",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectYear"
-                                                    }
-                                                  },
-                                                  [_vm._v("2029")]
-                                                ),
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "year old",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectYear"
-                                                    }
-                                                  },
-                                                  [_vm._v("2030")]
-                                                )
-                                              ]
-                                            )
-                                          ])
+                                                },
+                                                [_vm._v("2020")]
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "year",
+                                                  attrs: {
+                                                    "data-action": "selectYear"
+                                                  }
+                                                },
+                                                [_vm._v("2021")]
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "year",
+                                                  attrs: {
+                                                    "data-action": "selectYear"
+                                                  }
+                                                },
+                                                [_vm._v("2022")]
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "year",
+                                                  attrs: {
+                                                    "data-action": "selectYear"
+                                                  }
+                                                },
+                                                [_vm._v("2023")]
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "year",
+                                                  attrs: {
+                                                    "data-action": "selectYear"
+                                                  }
+                                                },
+                                                [_vm._v("2024")]
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "year",
+                                                  attrs: {
+                                                    "data-action": "selectYear"
+                                                  }
+                                                },
+                                                [_vm._v("2025")]
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "year",
+                                                  attrs: {
+                                                    "data-action": "selectYear"
+                                                  }
+                                                },
+                                                [_vm._v("2026")]
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "year",
+                                                  attrs: {
+                                                    "data-action": "selectYear"
+                                                  }
+                                                },
+                                                [_vm._v("2027")]
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "year",
+                                                  attrs: {
+                                                    "data-action": "selectYear"
+                                                  }
+                                                },
+                                                [_vm._v("2028")]
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "year",
+                                                  attrs: {
+                                                    "data-action": "selectYear"
+                                                  }
+                                                },
+                                                [_vm._v("2029")]
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "year old",
+                                                  attrs: {
+                                                    "data-action": "selectYear"
+                                                  }
+                                                },
+                                                [_vm._v("2030")]
+                                              )
+                                            ]
+                                          )
                                         ])
-                                      ]
-                                    )
-                                  ]
-                                ),
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass: "datepicker-decades",
-                                    staticStyle: { display: "none" }
-                                  },
-                                  [
-                                    _c(
-                                      "table",
-                                      { staticClass: "table-condensed" },
-                                      [
-                                        _c("thead", [
-                                          _c("tr", [
-                                            _c(
-                                              "th",
-                                              {
-                                                staticClass: "prev",
+                                      ])
+                                    ]
+                                  )
+                                ]
+                              ),
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "datepicker-decades",
+                                  staticStyle: { display: "none" }
+                                },
+                                [
+                                  _c(
+                                    "table",
+                                    { staticClass: "table-condensed" },
+                                    [
+                                      _c("thead", [
+                                        _c("tr", [
+                                          _c(
+                                            "th",
+                                            {
+                                              staticClass: "prev",
+                                              attrs: {
+                                                "data-action": "previous"
+                                              }
+                                            },
+                                            [
+                                              _c("span", {
+                                                staticClass:
+                                                  "fa fa-chevron-left",
                                                 attrs: {
-                                                  "data-action": "previous"
+                                                  title: "Previous Century"
                                                 }
-                                              },
-                                              [
-                                                _c("span", {
-                                                  staticClass:
-                                                    "fa fa-chevron-left",
-                                                  attrs: {
-                                                    title: "Previous Century"
-                                                  }
-                                                })
-                                              ]
-                                            ),
-                                            _c(
-                                              "th",
-                                              {
-                                                staticClass: "picker-switch",
-                                                attrs: {
-                                                  "data-action": "pickerSwitch",
-                                                  colspan: "5"
-                                                }
-                                              },
-                                              [_vm._v("2000-2090")]
-                                            ),
-                                            _c(
-                                              "th",
-                                              {
-                                                staticClass: "next",
-                                                attrs: { "data-action": "next" }
-                                              },
-                                              [
-                                                _c("span", {
-                                                  staticClass:
-                                                    "fa fa-chevron-right",
-                                                  attrs: {
-                                                    title: "Next Century"
-                                                  }
-                                                })
-                                              ]
-                                            )
-                                          ])
-                                        ]),
-                                        _c("tbody", [
-                                          _c("tr", [
-                                            _c(
-                                              "td",
-                                              { attrs: { colspan: "7" } },
-                                              [
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "decade old",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectDecade",
-                                                      "data-selection": "2006"
-                                                    }
-                                                  },
-                                                  [_vm._v("1990")]
-                                                ),
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "decade",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectDecade",
-                                                      "data-selection": "2006"
-                                                    }
-                                                  },
-                                                  [_vm._v("2000")]
-                                                ),
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass:
-                                                      "decade active",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectDecade",
-                                                      "data-selection": "2016"
-                                                    }
-                                                  },
-                                                  [_vm._v("2010")]
-                                                ),
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "decade",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectDecade",
-                                                      "data-selection": "2026"
-                                                    }
-                                                  },
-                                                  [_vm._v("2020")]
-                                                ),
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "decade",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectDecade",
-                                                      "data-selection": "2036"
-                                                    }
-                                                  },
-                                                  [_vm._v("2030")]
-                                                ),
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "decade",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectDecade",
-                                                      "data-selection": "2046"
-                                                    }
-                                                  },
-                                                  [_vm._v("2040")]
-                                                ),
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "decade",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectDecade",
-                                                      "data-selection": "2056"
-                                                    }
-                                                  },
-                                                  [_vm._v("2050")]
-                                                ),
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "decade",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectDecade",
-                                                      "data-selection": "2066"
-                                                    }
-                                                  },
-                                                  [_vm._v("2060")]
-                                                ),
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "decade",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectDecade",
-                                                      "data-selection": "2076"
-                                                    }
-                                                  },
-                                                  [_vm._v("2070")]
-                                                ),
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "decade",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectDecade",
-                                                      "data-selection": "2086"
-                                                    }
-                                                  },
-                                                  [_vm._v("2080")]
-                                                ),
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "decade",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectDecade",
-                                                      "data-selection": "2096"
-                                                    }
-                                                  },
-                                                  [_vm._v("2090")]
-                                                ),
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass: "decade old",
-                                                    attrs: {
-                                                      "data-action":
-                                                        "selectDecade",
-                                                      "data-selection": "2106"
-                                                    }
-                                                  },
-                                                  [_vm._v("2100")]
-                                                )
-                                              ]
-                                            )
-                                          ])
+                                              })
+                                            ]
+                                          ),
+                                          _c(
+                                            "th",
+                                            {
+                                              staticClass: "picker-switch",
+                                              attrs: {
+                                                "data-action": "pickerSwitch",
+                                                colspan: "5"
+                                              }
+                                            },
+                                            [_vm._v("2000-2090")]
+                                          ),
+                                          _c(
+                                            "th",
+                                            {
+                                              staticClass: "next",
+                                              attrs: { "data-action": "next" }
+                                            },
+                                            [
+                                              _c("span", {
+                                                staticClass:
+                                                  "fa fa-chevron-right",
+                                                attrs: { title: "Next Century" }
+                                              })
+                                            ]
+                                          )
                                         ])
-                                      ]
-                                    )
-                                  ]
-                                )
-                              ])
-                            ]),
-                            _c("li", {
-                              staticClass: "picker-switch accordion-toggle"
-                            })
-                          ])
-                        ]
-                      )
-                    ]
-                  )
-                ])
+                                      ]),
+                                      _c("tbody", [
+                                        _c("tr", [
+                                          _c(
+                                            "td",
+                                            { attrs: { colspan: "7" } },
+                                            [
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "decade old",
+                                                  attrs: {
+                                                    "data-action":
+                                                      "selectDecade",
+                                                    "data-selection": "2006"
+                                                  }
+                                                },
+                                                [_vm._v("1990")]
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "decade",
+                                                  attrs: {
+                                                    "data-action":
+                                                      "selectDecade",
+                                                    "data-selection": "2006"
+                                                  }
+                                                },
+                                                [_vm._v("2000")]
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "decade active",
+                                                  attrs: {
+                                                    "data-action":
+                                                      "selectDecade",
+                                                    "data-selection": "2016"
+                                                  }
+                                                },
+                                                [_vm._v("2010")]
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "decade",
+                                                  attrs: {
+                                                    "data-action":
+                                                      "selectDecade",
+                                                    "data-selection": "2026"
+                                                  }
+                                                },
+                                                [_vm._v("2020")]
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "decade",
+                                                  attrs: {
+                                                    "data-action":
+                                                      "selectDecade",
+                                                    "data-selection": "2036"
+                                                  }
+                                                },
+                                                [_vm._v("2030")]
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "decade",
+                                                  attrs: {
+                                                    "data-action":
+                                                      "selectDecade",
+                                                    "data-selection": "2046"
+                                                  }
+                                                },
+                                                [_vm._v("2040")]
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "decade",
+                                                  attrs: {
+                                                    "data-action":
+                                                      "selectDecade",
+                                                    "data-selection": "2056"
+                                                  }
+                                                },
+                                                [_vm._v("2050")]
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "decade",
+                                                  attrs: {
+                                                    "data-action":
+                                                      "selectDecade",
+                                                    "data-selection": "2066"
+                                                  }
+                                                },
+                                                [_vm._v("2060")]
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "decade",
+                                                  attrs: {
+                                                    "data-action":
+                                                      "selectDecade",
+                                                    "data-selection": "2076"
+                                                  }
+                                                },
+                                                [_vm._v("2070")]
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "decade",
+                                                  attrs: {
+                                                    "data-action":
+                                                      "selectDecade",
+                                                    "data-selection": "2086"
+                                                  }
+                                                },
+                                                [_vm._v("2080")]
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "decade",
+                                                  attrs: {
+                                                    "data-action":
+                                                      "selectDecade",
+                                                    "data-selection": "2096"
+                                                  }
+                                                },
+                                                [_vm._v("2090")]
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass: "decade old",
+                                                  attrs: {
+                                                    "data-action":
+                                                      "selectDecade",
+                                                    "data-selection": "2106"
+                                                  }
+                                                },
+                                                [_vm._v("2100")]
+                                              )
+                                            ]
+                                          )
+                                        ])
+                                      ])
+                                    ]
+                                  )
+                                ]
+                              )
+                            ])
+                          ]),
+                          _c("li", {
+                            staticClass: "picker-switch accordion-toggle"
+                          })
+                        ])
+                      ]
+                    )
+                  ]
+                )
               ])
-            ]
-          )
-        ])
+            ])
+          ]
+        )
       ])
     ])
   }
@@ -44341,419 +44774,449 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "row mt-5" }, [
-      _c("div", { staticClass: "col-md-12" }, [
-        _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-header" }, [
-            _c("h3", { staticClass: "card-title" }, [_vm._v("Awards List")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-tools" }, [
-              _c(
-                "button",
-                { staticClass: "btn btn-primary", on: { click: _vm.newModal } },
-                [
-                  _vm._v("Add New "),
-                  _c("i", { staticClass: "fas fa-plus fa-fw" })
-                ]
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-body table-responsive p-0" }, [
-            _c("table", { staticClass: "table table-hover text-nowrap" }, [
-              _vm._m(0),
+  return _c(
+    "div",
+    { staticClass: "container" },
+    [
+      _c("Upbar"),
+      _vm._v(" "),
+      _c("Navbar"),
+      _vm._v(" "),
+      _c("div", { staticClass: "row mt-5" }, [
+        _c("div", { staticClass: "col-md-12" }, [
+          _c("div", { staticClass: "card" }, [
+            _c("div", { staticClass: "card-header" }, [
+              _c("h3", { staticClass: "card-title" }, [_vm._v("Awards List")]),
               _vm._v(" "),
-              _c(
-                "tbody",
-                _vm._l(_vm.awards, function(award) {
-                  return _c("tr", { key: award.id }, [
-                    _c("td", [_vm._v(_vm._s(award.id))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(award.title))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(award.type))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(award.sponsor))]),
-                    _vm._v(" "),
-                    _c(
-                      "td",
-                      {
-                        staticStyle: {
-                          display: "block",
-                          "text-overflow": "ellipsis",
-                          width: "200px",
-                          overflow: "hidden",
-                          "white-space": "nowrap"
-                        }
-                      },
-                      [_vm._v(_vm._s(award.notes))]
-                    ),
-                    _vm._v(" "),
-                    _c("td", [_vm._v("Fred Lavega")]),
-                    _vm._v(" "),
-                    _c("td", [
-                      _vm._v(_vm._s(new Date(award.created_at).toDateString()))
-                    ]),
-                    _vm._v(" "),
-                    _c("td", [
-                      _vm._v(_vm._s(new Date(award.updated_at).toDateString()))
-                    ]),
-                    _vm._v(" "),
-                    _c("td", [
-                      _c("a", { attrs: { href: "#" } }, [
-                        _c("i", {
-                          staticClass: "fa fa-edit",
-                          on: {
-                            click: function($event) {
-                              return _vm.editModal(award)
-                            }
-                          }
-                        })
-                      ]),
+              _c("div", { staticClass: "card-tools" }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-primary",
+                    on: { click: _vm.newModal }
+                  },
+                  [
+                    _vm._v("Add New "),
+                    _c("i", { staticClass: "fas fa-plus fa-fw" })
+                  ]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-body table-responsive p-0" }, [
+              _c("table", { staticClass: "table table-hover text-nowrap" }, [
+                _vm._m(0),
+                _vm._v(" "),
+                _c(
+                  "tbody",
+                  _vm._l(_vm.awards, function(award) {
+                    return _c("tr", { key: award.id }, [
+                      _c("td", [_vm._v(_vm._s(award.id))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(award.title))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(award.type))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(award.sponsor))]),
                       _vm._v(" "),
                       _c(
-                        "a",
+                        "td",
                         {
-                          attrs: { href: "#" },
-                          on: {
-                            click: function($event) {
-                              return _vm.deleteAward(award.id)
-                            }
+                          staticStyle: {
+                            display: "block",
+                            "text-overflow": "ellipsis",
+                            width: "200px",
+                            overflow: "hidden",
+                            "white-space": "nowrap"
                           }
                         },
-                        [_c("i", { staticClass: "fa fa-trash" })]
-                      )
+                        [_vm._v(_vm._s(award.notes))]
+                      ),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("Fred Lavega")]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _vm._v(
+                          _vm._s(new Date(award.created_at).toDateString())
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _vm._v(
+                          _vm._s(new Date(award.updated_at).toDateString())
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _c("i", {
+                            staticClass: "fa fa-edit",
+                            on: {
+                              click: function($event) {
+                                return _vm.editModal(award)
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          {
+                            attrs: { href: "#" },
+                            on: {
+                              click: function($event) {
+                                return _vm.deleteAward(award.id)
+                              }
+                            }
+                          },
+                          [_c("i", { staticClass: "fa fa-trash" })]
+                        )
+                      ])
                     ])
-                  ])
-                }),
-                0
-              )
+                  }),
+                  0
+                )
+              ])
             ])
           ])
         ])
-      ])
-    ]),
-    _vm._v(" "),
-    _c(
-      "div",
-      {
-        staticClass: "modal fade",
-        attrs: {
-          id: "addNew",
-          tabindex: "-1",
-          role: "dialog",
-          "aria-labelledby": "addNew",
-          "aria-hidden": "true"
-        }
-      },
-      [
-        _c(
-          "div",
-          {
-            staticClass: "modal-dialog modal-dialog-centered",
-            attrs: { role: "document" }
-          },
-          [
-            _c("div", { staticClass: "modal-content" }, [
-              _c("div", { staticClass: "modal-header" }, [
-                _c(
-                  "h5",
-                  {
-                    directives: [
-                      {
-                        name: "show",
-                        rawName: "v-show",
-                        value: _vm.editMode,
-                        expression: "editMode"
-                      }
-                    ],
-                    staticClass: "modal-title",
-                    attrs: { id: "addNewLongTitle" }
-                  },
-                  [_vm._v("Edit Award")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "h5",
-                  {
-                    directives: [
-                      {
-                        name: "show",
-                        rawName: "v-show",
-                        value: !_vm.editMode,
-                        expression: "!editMode"
-                      }
-                    ],
-                    staticClass: "modal-title",
-                    attrs: { id: "addNewLongTitle" }
-                  },
-                  [_vm._v("Add Award")]
-                ),
-                _vm._v(" "),
-                _vm._m(1)
-              ]),
-              _vm._v(" "),
-              _c(
-                "form",
-                {
-                  on: {
-                    submit: function($event) {
-                      $event.preventDefault()
-                      _vm.editMode ? _vm.editAward() : _vm.saveAward()
-                    }
-                  }
-                },
-                [
-                  _c("div", { staticClass: "modal-body" }, [
-                    _c(
-                      "div",
-                      { staticClass: "form-group" },
-                      [
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.form.title,
-                              expression: "form.title"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          class: { "is-invalid": _vm.form.errors.has("title") },
-                          attrs: {
-                            type: "text",
-                            name: "title",
-                            placeholder: "Title"
-                          },
-                          domProps: { value: _vm.form.title },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.$set(_vm.form, "title", $event.target.value)
-                            }
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("has-error", {
-                          attrs: { form: _vm.form, field: "title" }
-                        })
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "modal fade",
+          attrs: {
+            id: "addNew",
+            tabindex: "-1",
+            role: "dialog",
+            "aria-labelledby": "addNew",
+            "aria-hidden": "true"
+          }
+        },
+        [
+          _c(
+            "div",
+            {
+              staticClass: "modal-dialog modal-dialog-centered",
+              attrs: { role: "document" }
+            },
+            [
+              _c("div", { staticClass: "modal-content" }, [
+                _c("div", { staticClass: "modal-header" }, [
+                  _c(
+                    "h5",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.editMode,
+                          expression: "editMode"
+                        }
                       ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "form-group" },
-                      [
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.form.type,
-                              expression: "form.type"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          class: { "is-invalid": _vm.form.errors.has("type") },
-                          attrs: {
-                            type: "text",
-                            name: "type",
-                            placeholder: "Type"
-                          },
-                          domProps: { value: _vm.form.type },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.$set(_vm.form, "type", $event.target.value)
-                            }
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("has-error", {
-                          attrs: { form: _vm.form, field: "type" }
-                        })
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "form-group" },
-                      [
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.form.sponsor,
-                              expression: "form.sponsor"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          class: {
-                            "is-invalid": _vm.form.errors.has("sponsor")
-                          },
-                          attrs: {
-                            type: "text",
-                            name: "sponsor",
-                            placeholder: "Sponsor"
-                          },
-                          domProps: { value: _vm.form.sponsor },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.$set(_vm.form, "sponsor", $event.target.value)
-                            }
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("has-error", {
-                          attrs: { form: _vm.form, field: "sponsor" }
-                        })
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "form-group" },
-                      [
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.form.notes,
-                              expression: "form.notes"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          class: { "is-invalid": _vm.form.errors.has("notes") },
-                          attrs: {
-                            type: "text",
-                            name: "notes",
-                            placeholder: "Notes"
-                          },
-                          domProps: { value: _vm.form.notes },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.$set(_vm.form, "notes", $event.target.value)
-                            }
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("has-error", {
-                          attrs: { form: _vm.form, field: "notes" }
-                        })
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "form-group" },
-                      [
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.form.winners,
-                              expression: "form.winners"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          class: {
-                            "is-invalid": _vm.form.errors.has("winners")
-                          },
-                          attrs: {
-                            readonly: "readonly",
-                            type: "text",
-                            name: "winners",
-                            placeholder: "Winners"
-                          },
-                          domProps: { value: _vm.form.winners },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.$set(_vm.form, "winners", $event.target.value)
-                            }
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("has-error", {
-                          attrs: { form: _vm.form, field: "winners" }
-                        })
-                      ],
-                      1
-                    )
-                  ]),
+                      staticClass: "modal-title",
+                      attrs: { id: "addNewLongTitle" }
+                    },
+                    [_vm._v("Edit Award")]
+                  ),
                   _vm._v(" "),
-                  _c("div", { staticClass: "modal-footer" }, [
-                    _c(
-                      "button",
-                      {
-                        staticClass: "btn btn-danger",
-                        attrs: { type: "button", "data-dismiss": "modal" }
-                      },
-                      [_vm._v("Close")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "button",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: _vm.editMode,
-                            expression: "editMode"
-                          }
+                  _c(
+                    "h5",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: !_vm.editMode,
+                          expression: "!editMode"
+                        }
+                      ],
+                      staticClass: "modal-title",
+                      attrs: { id: "addNewLongTitle" }
+                    },
+                    [_vm._v("Add Award")]
+                  ),
+                  _vm._v(" "),
+                  _vm._m(1)
+                ]),
+                _vm._v(" "),
+                _c(
+                  "form",
+                  {
+                    on: {
+                      submit: function($event) {
+                        $event.preventDefault()
+                        _vm.editMode ? _vm.editAward() : _vm.saveAward()
+                      }
+                    }
+                  },
+                  [
+                    _c("div", { staticClass: "modal-body" }, [
+                      _c(
+                        "div",
+                        { staticClass: "form-group" },
+                        [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.form.title,
+                                expression: "form.title"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            class: {
+                              "is-invalid": _vm.form.errors.has("title")
+                            },
+                            attrs: {
+                              type: "text",
+                              name: "title",
+                              placeholder: "Title"
+                            },
+                            domProps: { value: _vm.form.title },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(_vm.form, "title", $event.target.value)
+                              }
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("has-error", {
+                            attrs: { form: _vm.form, field: "title" }
+                          })
                         ],
-                        staticClass: "btn btn-success",
-                        attrs: { type: "submit" }
-                      },
-                      [_vm._v("Update")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "button",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: !_vm.editMode,
-                            expression: "!editMode"
-                          }
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "form-group" },
+                        [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.form.type,
+                                expression: "form.type"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            class: {
+                              "is-invalid": _vm.form.errors.has("type")
+                            },
+                            attrs: {
+                              type: "text",
+                              name: "type",
+                              placeholder: "Type"
+                            },
+                            domProps: { value: _vm.form.type },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(_vm.form, "type", $event.target.value)
+                              }
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("has-error", {
+                            attrs: { form: _vm.form, field: "type" }
+                          })
                         ],
-                        staticClass: "btn btn-success",
-                        attrs: { type: "submit" }
-                      },
-                      [_vm._v("Create")]
-                    )
-                  ])
-                ]
-              )
-            ])
-          ]
-        )
-      ]
-    )
-  ])
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "form-group" },
+                        [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.form.sponsor,
+                                expression: "form.sponsor"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            class: {
+                              "is-invalid": _vm.form.errors.has("sponsor")
+                            },
+                            attrs: {
+                              type: "text",
+                              name: "sponsor",
+                              placeholder: "Sponsor"
+                            },
+                            domProps: { value: _vm.form.sponsor },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(
+                                  _vm.form,
+                                  "sponsor",
+                                  $event.target.value
+                                )
+                              }
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("has-error", {
+                            attrs: { form: _vm.form, field: "sponsor" }
+                          })
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "form-group" },
+                        [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.form.notes,
+                                expression: "form.notes"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            class: {
+                              "is-invalid": _vm.form.errors.has("notes")
+                            },
+                            attrs: {
+                              type: "text",
+                              name: "notes",
+                              placeholder: "Notes"
+                            },
+                            domProps: { value: _vm.form.notes },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(_vm.form, "notes", $event.target.value)
+                              }
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("has-error", {
+                            attrs: { form: _vm.form, field: "notes" }
+                          })
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "form-group" },
+                        [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.form.winners,
+                                expression: "form.winners"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            class: {
+                              "is-invalid": _vm.form.errors.has("winners")
+                            },
+                            attrs: {
+                              readonly: "readonly",
+                              type: "text",
+                              name: "winners",
+                              placeholder: "Winners"
+                            },
+                            domProps: { value: _vm.form.winners },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(
+                                  _vm.form,
+                                  "winners",
+                                  $event.target.value
+                                )
+                              }
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("has-error", {
+                            attrs: { form: _vm.form, field: "winners" }
+                          })
+                        ],
+                        1
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "modal-footer" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-danger",
+                          attrs: { type: "button", "data-dismiss": "modal" }
+                        },
+                        [_vm._v("Close")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.editMode,
+                              expression: "editMode"
+                            }
+                          ],
+                          staticClass: "btn btn-success",
+                          attrs: { type: "submit" }
+                        },
+                        [_vm._v("Update")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: !_vm.editMode,
+                              expression: "!editMode"
+                            }
+                          ],
+                          staticClass: "btn btn-success",
+                          attrs: { type: "submit" }
+                        },
+                        [_vm._v("Create")]
+                      )
+                    ])
+                  ]
+                )
+              ])
+            ]
+          )
+        ]
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = [
   function() {
@@ -44819,345 +45282,369 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "row mt-5" }, [
-      _c("div", { staticClass: "col-md-12" }, [
-        _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-header" }, [
-            _c("h3", { staticClass: "card-title" }, [
-              _vm._v("Publications List")
+  return _c(
+    "div",
+    { staticClass: "container" },
+    [
+      _c("Upbar"),
+      _vm._v(" "),
+      _c("Navbar"),
+      _vm._v(" "),
+      _c("div", { staticClass: "row mt-5" }, [
+        _c("div", { staticClass: "col-md-12" }, [
+          _c("div", { staticClass: "card" }, [
+            _c("div", { staticClass: "card-header" }, [
+              _c("h3", { staticClass: "card-title" }, [
+                _vm._v("Publications List")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-tools" }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-primary",
+                    on: { click: _vm.newModal }
+                  },
+                  [
+                    _vm._v("Add New "),
+                    _c("i", { staticClass: "fas fa-plus fa-fw" })
+                  ]
+                )
+              ])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "card-tools" }, [
-              _c(
-                "button",
-                { staticClass: "btn btn-primary", on: { click: _vm.newModal } },
-                [
-                  _vm._v("Add New "),
-                  _c("i", { staticClass: "fas fa-plus fa-fw" })
-                ]
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-body table-responsive p-0" }, [
-            _c("table", { staticClass: "table table-hover text-nowrap" }, [
-              _vm._m(0),
-              _vm._v(" "),
-              _c(
-                "tbody",
-                _vm._l(_vm.publications, function(publication) {
-                  return _c("tr", { key: publication.id }, [
-                    _c("td", [_vm._v(_vm._s(publication.id))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(publication.title))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(publication.type))]),
-                    _vm._v(" "),
-                    _c(
-                      "td",
-                      {
-                        staticStyle: {
-                          display: "block",
-                          "text-overflow": "ellipsis",
-                          width: "200px",
-                          overflow: "hidden",
-                          "white-space": "nowrap"
-                        }
-                      },
-                      [_vm._v(_vm._s(publication.content))]
-                    ),
-                    _vm._v(" "),
-                    _c("td", [
-                      _vm._v(
-                        _vm._s(new Date(publication.created_at).toDateString())
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("td", [
-                      _vm._v(
-                        _vm._s(new Date(publication.updated_at).toDateString())
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("td", [
-                      _c("a", { attrs: { href: "#" } }, [
-                        _c("i", {
-                          staticClass: "fa fa-edit",
-                          on: {
-                            click: function($event) {
-                              return _vm.editModal(publication)
-                            }
-                          }
-                        })
-                      ]),
+            _c("div", { staticClass: "card-body table-responsive p-0" }, [
+              _c("table", { staticClass: "table table-hover text-nowrap" }, [
+                _vm._m(0),
+                _vm._v(" "),
+                _c(
+                  "tbody",
+                  _vm._l(_vm.publications, function(publication) {
+                    return _c("tr", { key: publication.id }, [
+                      _c("td", [_vm._v(_vm._s(publication.id))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(publication.title))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(publication.type))]),
                       _vm._v(" "),
                       _c(
-                        "a",
+                        "td",
                         {
-                          attrs: { href: "#" },
-                          on: {
-                            click: function($event) {
-                              return _vm.deletePublication(publication.id)
-                            }
+                          staticStyle: {
+                            display: "block",
+                            "text-overflow": "ellipsis",
+                            width: "200px",
+                            overflow: "hidden",
+                            "white-space": "nowrap"
                           }
                         },
-                        [_c("i", { staticClass: "fa fa-trash" })]
-                      )
+                        [_vm._v(_vm._s(publication.content))]
+                      ),
+                      _vm._v(" "),
+                      _c("td", [
+                        _vm._v(
+                          _vm._s(
+                            new Date(publication.created_at).toDateString()
+                          )
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _vm._v(
+                          _vm._s(
+                            new Date(publication.updated_at).toDateString()
+                          )
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _c("i", {
+                            staticClass: "fa fa-edit",
+                            on: {
+                              click: function($event) {
+                                return _vm.editModal(publication)
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          {
+                            attrs: { href: "#" },
+                            on: {
+                              click: function($event) {
+                                return _vm.deletePublication(publication.id)
+                              }
+                            }
+                          },
+                          [_c("i", { staticClass: "fa fa-trash" })]
+                        )
+                      ])
                     ])
-                  ])
-                }),
-                0
-              )
+                  }),
+                  0
+                )
+              ])
             ])
           ])
         ])
-      ])
-    ]),
-    _vm._v(" "),
-    _c(
-      "div",
-      {
-        staticClass: "modal fade",
-        attrs: {
-          id: "addNew",
-          tabindex: "-1",
-          role: "dialog",
-          "aria-labelledby": "addNew",
-          "aria-hidden": "true"
-        }
-      },
-      [
-        _c(
-          "div",
-          {
-            staticClass: "modal-dialog modal-dialog-centered",
-            attrs: { role: "document" }
-          },
-          [
-            _c("div", { staticClass: "modal-content" }, [
-              _c("div", { staticClass: "modal-header" }, [
-                _c(
-                  "h5",
-                  {
-                    directives: [
-                      {
-                        name: "show",
-                        rawName: "v-show",
-                        value: _vm.editMode,
-                        expression: "editMode"
-                      }
-                    ],
-                    staticClass: "modal-title",
-                    attrs: { id: "addNewLongTitle" }
-                  },
-                  [_vm._v("Edit Publication")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "h5",
-                  {
-                    directives: [
-                      {
-                        name: "show",
-                        rawName: "v-show",
-                        value: !_vm.editMode,
-                        expression: "!editMode"
-                      }
-                    ],
-                    staticClass: "modal-title",
-                    attrs: { id: "addNewLongTitle" }
-                  },
-                  [_vm._v("Add Publication")]
-                ),
-                _vm._v(" "),
-                _vm._m(1)
-              ]),
-              _vm._v(" "),
-              _c(
-                "form",
-                {
-                  on: {
-                    submit: function($event) {
-                      $event.preventDefault()
-                      _vm.editMode
-                        ? _vm.editPublication()
-                        : _vm.savePublication()
-                    }
-                  }
-                },
-                [
-                  _c("div", { staticClass: "modal-body" }, [
-                    _c(
-                      "div",
-                      { staticClass: "form-group" },
-                      [
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.form.title,
-                              expression: "form.title"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          class: { "is-invalid": _vm.form.errors.has("title") },
-                          attrs: {
-                            type: "text",
-                            name: "title",
-                            placeholder: "Title"
-                          },
-                          domProps: { value: _vm.form.title },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.$set(_vm.form, "title", $event.target.value)
-                            }
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("has-error", {
-                          attrs: { form: _vm.form, field: "title" }
-                        })
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "modal fade",
+          attrs: {
+            id: "addNew",
+            tabindex: "-1",
+            role: "dialog",
+            "aria-labelledby": "addNew",
+            "aria-hidden": "true"
+          }
+        },
+        [
+          _c(
+            "div",
+            {
+              staticClass: "modal-dialog modal-dialog-centered",
+              attrs: { role: "document" }
+            },
+            [
+              _c("div", { staticClass: "modal-content" }, [
+                _c("div", { staticClass: "modal-header" }, [
+                  _c(
+                    "h5",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.editMode,
+                          expression: "editMode"
+                        }
                       ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "form-group" },
-                      [
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.form.type,
-                              expression: "form.type"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          class: { "is-invalid": _vm.form.errors.has("type") },
-                          attrs: {
-                            type: "text",
-                            name: "type",
-                            placeholder: "Type"
-                          },
-                          domProps: { value: _vm.form.type },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.$set(_vm.form, "type", $event.target.value)
-                            }
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("has-error", {
-                          attrs: { form: _vm.form, field: "type" }
-                        })
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "form-group" },
-                      [
-                        _c("textarea", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.form.content,
-                              expression: "form.content"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          class: {
-                            "is-invalid": _vm.form.errors.has("content")
-                          },
-                          attrs: {
-                            name: "content",
-                            cols: "40",
-                            rows: "5",
-                            placeholder: "Write here..."
-                          },
-                          domProps: { value: _vm.form.content },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.$set(_vm.form, "content", $event.target.value)
-                            }
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("has-error", {
-                          attrs: { form: _vm.form, field: "content" }
-                        })
-                      ],
-                      1
-                    )
-                  ]),
+                      staticClass: "modal-title",
+                      attrs: { id: "addNewLongTitle" }
+                    },
+                    [_vm._v("Edit Publication")]
+                  ),
                   _vm._v(" "),
-                  _c("div", { staticClass: "modal-footer" }, [
-                    _c(
-                      "button",
-                      {
-                        staticClass: "btn btn-danger",
-                        attrs: { type: "button", "data-dismiss": "modal" }
-                      },
-                      [_vm._v("Close")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "button",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: _vm.editMode,
-                            expression: "editMode"
-                          }
+                  _c(
+                    "h5",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: !_vm.editMode,
+                          expression: "!editMode"
+                        }
+                      ],
+                      staticClass: "modal-title",
+                      attrs: { id: "addNewLongTitle" }
+                    },
+                    [_vm._v("Add Publication")]
+                  ),
+                  _vm._v(" "),
+                  _vm._m(1)
+                ]),
+                _vm._v(" "),
+                _c(
+                  "form",
+                  {
+                    on: {
+                      submit: function($event) {
+                        $event.preventDefault()
+                        _vm.editMode
+                          ? _vm.editPublication()
+                          : _vm.savePublication()
+                      }
+                    }
+                  },
+                  [
+                    _c("div", { staticClass: "modal-body" }, [
+                      _c(
+                        "div",
+                        { staticClass: "form-group" },
+                        [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.form.title,
+                                expression: "form.title"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            class: {
+                              "is-invalid": _vm.form.errors.has("title")
+                            },
+                            attrs: {
+                              type: "text",
+                              name: "title",
+                              placeholder: "Title"
+                            },
+                            domProps: { value: _vm.form.title },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(_vm.form, "title", $event.target.value)
+                              }
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("has-error", {
+                            attrs: { form: _vm.form, field: "title" }
+                          })
                         ],
-                        staticClass: "btn btn-success",
-                        attrs: { type: "submit" }
-                      },
-                      [_vm._v("Update")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "button",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: !_vm.editMode,
-                            expression: "!editMode"
-                          }
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "form-group" },
+                        [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.form.type,
+                                expression: "form.type"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            class: {
+                              "is-invalid": _vm.form.errors.has("type")
+                            },
+                            attrs: {
+                              type: "text",
+                              name: "type",
+                              placeholder: "Type"
+                            },
+                            domProps: { value: _vm.form.type },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(_vm.form, "type", $event.target.value)
+                              }
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("has-error", {
+                            attrs: { form: _vm.form, field: "type" }
+                          })
                         ],
-                        staticClass: "btn btn-success",
-                        attrs: { type: "submit" }
-                      },
-                      [_vm._v("Create")]
-                    )
-                  ])
-                ]
-              )
-            ])
-          ]
-        )
-      ]
-    )
-  ])
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "form-group" },
+                        [
+                          _c("textarea", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.form.content,
+                                expression: "form.content"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            class: {
+                              "is-invalid": _vm.form.errors.has("content")
+                            },
+                            attrs: {
+                              name: "content",
+                              cols: "40",
+                              rows: "5",
+                              placeholder: "Write here..."
+                            },
+                            domProps: { value: _vm.form.content },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(
+                                  _vm.form,
+                                  "content",
+                                  $event.target.value
+                                )
+                              }
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("has-error", {
+                            attrs: { form: _vm.form, field: "content" }
+                          })
+                        ],
+                        1
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "modal-footer" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-danger",
+                          attrs: { type: "button", "data-dismiss": "modal" }
+                        },
+                        [_vm._v("Close")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.editMode,
+                              expression: "editMode"
+                            }
+                          ],
+                          staticClass: "btn btn-success",
+                          attrs: { type: "submit" }
+                        },
+                        [_vm._v("Update")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: !_vm.editMode,
+                              expression: "!editMode"
+                            }
+                          ],
+                          staticClass: "btn btn-success",
+                          attrs: { type: "submit" }
+                        },
+                        [_vm._v("Create")]
+                      )
+                    ])
+                  ]
+                )
+              ])
+            ]
+          )
+        ]
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = [
   function() {
@@ -45219,496 +45706,516 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "row mt-5" }, [
-      _c("div", { staticClass: "col-md-12" }, [
-        _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-header" }, [
-            _c("h3", { staticClass: "card-title" }, [
-              _vm._v("Researchers List")
+  return _c(
+    "div",
+    { staticClass: "container" },
+    [
+      _c("Upbar"),
+      _vm._v(" "),
+      _c("Navbar"),
+      _vm._v(" "),
+      _c("div", { staticClass: "row mt-5" }, [
+        _c("div", { staticClass: "col-md-12" }, [
+          _c("div", { staticClass: "card" }, [
+            _c("div", { staticClass: "card-header" }, [
+              _c("h3", { staticClass: "card-title" }, [
+                _vm._v("Researchers List")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-tools" }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-primary",
+                    on: { click: _vm.newModal }
+                  },
+                  [
+                    _vm._v("Add New "),
+                    _c("i", { staticClass: "fas fa-user-plus fa-fw" })
+                  ]
+                )
+              ])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "card-tools" }, [
-              _c(
-                "button",
-                { staticClass: "btn btn-primary", on: { click: _vm.newModal } },
-                [
-                  _vm._v("Add New "),
-                  _c("i", { staticClass: "fas fa-user-plus fa-fw" })
-                ]
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-body table-responsive p-0" }, [
-            _c("table", { staticClass: "table table-hover text-nowrap" }, [
-              _vm._m(0),
-              _vm._v(" "),
-              _c(
-                "tbody",
-                _vm._l(_vm.users, function(user) {
-                  return _c("tr", { key: user.id }, [
-                    _c("td", [_vm._v(_vm._s(user.id))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(user.name))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(user.status))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(user.email))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(user.type))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(user.field))]),
-                    _vm._v(" "),
-                    _c("td", [
-                      _vm._v(_vm._s(new Date(user.created_at).toDateString()))
-                    ]),
-                    _vm._v(" "),
-                    _c("td", [
-                      _c("a", { attrs: { href: "#" } }, [
-                        _c("i", {
-                          staticClass: "fa fa-edit",
-                          on: {
-                            click: function($event) {
-                              return _vm.editModal(user)
-                            }
-                          }
-                        })
+            _c("div", { staticClass: "card-body table-responsive p-0" }, [
+              _c("table", { staticClass: "table table-hover text-nowrap" }, [
+                _vm._m(0),
+                _vm._v(" "),
+                _c(
+                  "tbody",
+                  _vm._l(_vm.users, function(user) {
+                    return _c("tr", { key: user.id }, [
+                      _c("td", [_vm._v(_vm._s(user.id))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(user.name))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(user.status))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(user.email))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(user.type))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(user.field))]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _vm._v(_vm._s(new Date(user.created_at).toDateString()))
                       ]),
                       _vm._v(" "),
-                      _c(
-                        "a",
-                        {
-                          attrs: { href: "#" },
-                          on: {
-                            click: function($event) {
-                              return _vm.deleteUser(user.id)
+                      _c("td", [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _c("i", {
+                            staticClass: "fa fa-edit",
+                            on: {
+                              click: function($event) {
+                                return _vm.editModal(user)
+                              }
                             }
-                          }
-                        },
-                        [_c("i", { staticClass: "fa fa-trash" })]
-                      )
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          {
+                            attrs: { href: "#" },
+                            on: {
+                              click: function($event) {
+                                return _vm.deleteUser(user.id)
+                              }
+                            }
+                          },
+                          [_c("i", { staticClass: "fa fa-trash" })]
+                        )
+                      ])
                     ])
-                  ])
-                }),
-                0
-              )
+                  }),
+                  0
+                )
+              ])
             ])
           ])
         ])
-      ])
-    ]),
-    _vm._v(" "),
-    _c(
-      "div",
-      {
-        staticClass: "modal fade",
-        attrs: {
-          id: "addNew",
-          tabindex: "-1",
-          role: "dialog",
-          "aria-labelledby": "addNew",
-          "aria-hidden": "true"
-        }
-      },
-      [
-        _c(
-          "div",
-          {
-            staticClass: "modal-dialog modal-dialog-centered",
-            attrs: { role: "document" }
-          },
-          [
-            _c("div", { staticClass: "modal-content" }, [
-              _c("div", { staticClass: "modal-header" }, [
-                _c(
-                  "h5",
-                  {
-                    directives: [
-                      {
-                        name: "show",
-                        rawName: "v-show",
-                        value: _vm.editMode,
-                        expression: "editMode"
-                      }
-                    ],
-                    staticClass: "modal-title",
-                    attrs: { id: "addNewLongTitle" }
-                  },
-                  [_vm._v("Edit Researcher")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "h5",
-                  {
-                    directives: [
-                      {
-                        name: "show",
-                        rawName: "v-show",
-                        value: !_vm.editMode,
-                        expression: "!editMode"
-                      }
-                    ],
-                    staticClass: "modal-title",
-                    attrs: { id: "addNewLongTitle" }
-                  },
-                  [_vm._v("Add New Researcher")]
-                ),
-                _vm._v(" "),
-                _vm._m(1)
-              ]),
-              _vm._v(" "),
-              _c(
-                "form",
-                {
-                  on: {
-                    submit: function($event) {
-                      $event.preventDefault()
-                      _vm.editMode ? _vm.editUser() : _vm.saveUser()
-                    }
-                  }
-                },
-                [
-                  _c("div", { staticClass: "modal-body" }, [
-                    _c(
-                      "div",
-                      { staticClass: "form-group" },
-                      [
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.form.name,
-                              expression: "form.name"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          class: { "is-invalid": _vm.form.errors.has("name") },
-                          attrs: {
-                            type: "text",
-                            name: "name",
-                            placeholder: "Name"
-                          },
-                          domProps: { value: _vm.form.name },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.$set(_vm.form, "name", $event.target.value)
-                            }
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("has-error", {
-                          attrs: { form: _vm.form, field: "name" }
-                        })
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "modal fade",
+          attrs: {
+            id: "addNew",
+            tabindex: "-1",
+            role: "dialog",
+            "aria-labelledby": "addNew",
+            "aria-hidden": "true"
+          }
+        },
+        [
+          _c(
+            "div",
+            {
+              staticClass: "modal-dialog modal-dialog-centered",
+              attrs: { role: "document" }
+            },
+            [
+              _c("div", { staticClass: "modal-content" }, [
+                _c("div", { staticClass: "modal-header" }, [
+                  _c(
+                    "h5",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.editMode,
+                          expression: "editMode"
+                        }
                       ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "form-group" },
-                      [
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.form.email,
-                              expression: "form.email"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          class: { "is-invalid": _vm.form.errors.has("email") },
-                          attrs: {
-                            type: "text",
-                            name: "email",
-                            placeholder: "Email"
-                          },
-                          domProps: { value: _vm.form.email },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.$set(_vm.form, "email", $event.target.value)
-                            }
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("has-error", {
-                          attrs: { form: _vm.form, field: "email" }
-                        })
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "form-group" },
-                      [
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.form.password,
-                              expression: "form.password"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          class: {
-                            "is-invalid": _vm.form.errors.has("password")
-                          },
-                          attrs: {
-                            type: "password",
-                            name: "password",
-                            placeholder: "***********"
-                          },
-                          domProps: { value: _vm.form.password },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.$set(
-                                _vm.form,
-                                "password",
-                                $event.target.value
-                              )
-                            }
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("has-error", {
-                          attrs: { form: _vm.form, field: "password" }
-                        })
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "form-group" },
-                      [
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.form.field,
-                              expression: "form.field"
-                            }
-                          ],
-                          staticClass: "form-control",
-                          class: { "is-invalid": _vm.form.errors.has("field") },
-                          attrs: {
-                            type: "text",
-                            name: "field",
-                            placeholder: "Field"
-                          },
-                          domProps: { value: _vm.form.field },
-                          on: {
-                            input: function($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.$set(_vm.form, "field", $event.target.value)
-                            }
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("has-error", {
-                          attrs: { form: _vm.form, field: "field" }
-                        })
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "form-group" },
-                      [
-                        _c(
-                          "select",
-                          {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.type,
-                                expression: "form.type"
-                              }
-                            ],
-                            staticClass: "form-control",
-                            class: {
-                              "is-invalid": _vm.form.errors.has("type")
-                            },
-                            attrs: { name: "type", id: "type" },
-                            on: {
-                              change: function($event) {
-                                var $$selectedVal = Array.prototype.filter
-                                  .call($event.target.options, function(o) {
-                                    return o.selected
-                                  })
-                                  .map(function(o) {
-                                    var val = "_value" in o ? o._value : o.value
-                                    return val
-                                  })
-                                _vm.$set(
-                                  _vm.form,
-                                  "type",
-                                  $event.target.multiple
-                                    ? $$selectedVal
-                                    : $$selectedVal[0]
-                                )
-                              }
-                            }
-                          },
-                          [
-                            _c("option", { attrs: { value: "" } }, [
-                              _vm._v("Attribute Privileges")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "Admin" } }, [
-                              _vm._v("Admin")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "User" } }, [
-                              _vm._v("Standard User")
-                            ])
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("has-error", {
-                          attrs: { form: _vm.form, field: "type" }
-                        })
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "form-group" },
-                      [
-                        _c(
-                          "select",
-                          {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.status,
-                                expression: "form.status"
-                              }
-                            ],
-                            staticClass: "form-control",
-                            class: {
-                              "is-invalid": _vm.form.errors.has("status")
-                            },
-                            attrs: { name: "status", id: "status" },
-                            on: {
-                              change: function($event) {
-                                var $$selectedVal = Array.prototype.filter
-                                  .call($event.target.options, function(o) {
-                                    return o.selected
-                                  })
-                                  .map(function(o) {
-                                    var val = "_value" in o ? o._value : o.value
-                                    return val
-                                  })
-                                _vm.$set(
-                                  _vm.form,
-                                  "status",
-                                  $event.target.multiple
-                                    ? $$selectedVal
-                                    : $$selectedVal[0]
-                                )
-                              }
-                            }
-                          },
-                          [
-                            _c("option", { attrs: { value: "" } }, [
-                              _vm._v("Select ")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "Professor" } }, [
-                              _vm._v("Professor")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "Student" } }, [
-                              _vm._v("Student")
-                            ]),
-                            _vm._v(" "),
-                            _c("option", { attrs: { value: "Alumni" } }, [
-                              _vm._v("Alumni")
-                            ])
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("has-error", {
-                          attrs: { form: _vm.form, field: "status" }
-                        })
-                      ],
-                      1
-                    )
-                  ]),
+                      staticClass: "modal-title",
+                      attrs: { id: "addNewLongTitle" }
+                    },
+                    [_vm._v("Edit Researcher")]
+                  ),
                   _vm._v(" "),
-                  _c("div", { staticClass: "modal-footer" }, [
-                    _c(
-                      "button",
-                      {
-                        staticClass: "btn btn-danger",
-                        attrs: { type: "button", "data-dismiss": "modal" }
-                      },
-                      [_vm._v("Close")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "button",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: _vm.editMode,
-                            expression: "editMode"
-                          }
+                  _c(
+                    "h5",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: !_vm.editMode,
+                          expression: "!editMode"
+                        }
+                      ],
+                      staticClass: "modal-title",
+                      attrs: { id: "addNewLongTitle" }
+                    },
+                    [_vm._v("Add New Researcher")]
+                  ),
+                  _vm._v(" "),
+                  _vm._m(1)
+                ]),
+                _vm._v(" "),
+                _c(
+                  "form",
+                  {
+                    on: {
+                      submit: function($event) {
+                        $event.preventDefault()
+                        _vm.editMode ? _vm.editUser() : _vm.saveUser()
+                      }
+                    }
+                  },
+                  [
+                    _c("div", { staticClass: "modal-body" }, [
+                      _c(
+                        "div",
+                        { staticClass: "form-group" },
+                        [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.form.name,
+                                expression: "form.name"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            class: {
+                              "is-invalid": _vm.form.errors.has("name")
+                            },
+                            attrs: {
+                              type: "text",
+                              name: "name",
+                              placeholder: "Name"
+                            },
+                            domProps: { value: _vm.form.name },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(_vm.form, "name", $event.target.value)
+                              }
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("has-error", {
+                            attrs: { form: _vm.form, field: "name" }
+                          })
                         ],
-                        staticClass: "btn btn-success",
-                        attrs: { type: "submit" }
-                      },
-                      [_vm._v("Update")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "button",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: !_vm.editMode,
-                            expression: "!editMode"
-                          }
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "form-group" },
+                        [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.form.email,
+                                expression: "form.email"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            class: {
+                              "is-invalid": _vm.form.errors.has("email")
+                            },
+                            attrs: {
+                              type: "text",
+                              name: "email",
+                              placeholder: "Email"
+                            },
+                            domProps: { value: _vm.form.email },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(_vm.form, "email", $event.target.value)
+                              }
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("has-error", {
+                            attrs: { form: _vm.form, field: "email" }
+                          })
                         ],
-                        staticClass: "btn btn-success",
-                        attrs: { type: "submit" }
-                      },
-                      [_vm._v("Create")]
-                    )
-                  ])
-                ]
-              )
-            ])
-          ]
-        )
-      ]
-    )
-  ])
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "form-group" },
+                        [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.form.password,
+                                expression: "form.password"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            class: {
+                              "is-invalid": _vm.form.errors.has("password")
+                            },
+                            attrs: {
+                              type: "password",
+                              name: "password",
+                              placeholder: "***********"
+                            },
+                            domProps: { value: _vm.form.password },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(
+                                  _vm.form,
+                                  "password",
+                                  $event.target.value
+                                )
+                              }
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("has-error", {
+                            attrs: { form: _vm.form, field: "password" }
+                          })
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "form-group" },
+                        [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.form.field,
+                                expression: "form.field"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            class: {
+                              "is-invalid": _vm.form.errors.has("field")
+                            },
+                            attrs: {
+                              type: "text",
+                              name: "field",
+                              placeholder: "Field"
+                            },
+                            domProps: { value: _vm.form.field },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(_vm.form, "field", $event.target.value)
+                              }
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("has-error", {
+                            attrs: { form: _vm.form, field: "field" }
+                          })
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "form-group" },
+                        [
+                          _c(
+                            "select",
+                            {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.type,
+                                  expression: "form.type"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              class: {
+                                "is-invalid": _vm.form.errors.has("type")
+                              },
+                              attrs: { name: "type", id: "type" },
+                              on: {
+                                change: function($event) {
+                                  var $$selectedVal = Array.prototype.filter
+                                    .call($event.target.options, function(o) {
+                                      return o.selected
+                                    })
+                                    .map(function(o) {
+                                      var val =
+                                        "_value" in o ? o._value : o.value
+                                      return val
+                                    })
+                                  _vm.$set(
+                                    _vm.form,
+                                    "type",
+                                    $event.target.multiple
+                                      ? $$selectedVal
+                                      : $$selectedVal[0]
+                                  )
+                                }
+                              }
+                            },
+                            [
+                              _c("option", { attrs: { value: "" } }, [
+                                _vm._v("Attribute Privileges")
+                              ]),
+                              _vm._v(" "),
+                              _c("option", { attrs: { value: "Admin" } }, [
+                                _vm._v("Admin")
+                              ]),
+                              _vm._v(" "),
+                              _c("option", { attrs: { value: "User" } }, [
+                                _vm._v("Standard User")
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("has-error", {
+                            attrs: { form: _vm.form, field: "type" }
+                          })
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "form-group" },
+                        [
+                          _c(
+                            "select",
+                            {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.status,
+                                  expression: "form.status"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              class: {
+                                "is-invalid": _vm.form.errors.has("status")
+                              },
+                              attrs: { name: "status", id: "status" },
+                              on: {
+                                change: function($event) {
+                                  var $$selectedVal = Array.prototype.filter
+                                    .call($event.target.options, function(o) {
+                                      return o.selected
+                                    })
+                                    .map(function(o) {
+                                      var val =
+                                        "_value" in o ? o._value : o.value
+                                      return val
+                                    })
+                                  _vm.$set(
+                                    _vm.form,
+                                    "status",
+                                    $event.target.multiple
+                                      ? $$selectedVal
+                                      : $$selectedVal[0]
+                                  )
+                                }
+                              }
+                            },
+                            [
+                              _c("option", { attrs: { value: "" } }, [
+                                _vm._v("Select ")
+                              ]),
+                              _vm._v(" "),
+                              _c("option", { attrs: { value: "Professor" } }, [
+                                _vm._v("Professor")
+                              ]),
+                              _vm._v(" "),
+                              _c("option", { attrs: { value: "Student" } }, [
+                                _vm._v("Student")
+                              ]),
+                              _vm._v(" "),
+                              _c("option", { attrs: { value: "Alumni" } }, [
+                                _vm._v("Alumni")
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("has-error", {
+                            attrs: { form: _vm.form, field: "status" }
+                          })
+                        ],
+                        1
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "modal-footer" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-danger",
+                          attrs: { type: "button", "data-dismiss": "modal" }
+                        },
+                        [_vm._v("Close")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.editMode,
+                              expression: "editMode"
+                            }
+                          ],
+                          staticClass: "btn btn-success",
+                          attrs: { type: "submit" }
+                        },
+                        [_vm._v("Update")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: !_vm.editMode,
+                              expression: "!editMode"
+                            }
+                          ],
+                          staticClass: "btn btn-success",
+                          attrs: { type: "submit" }
+                        },
+                        [_vm._v("Create")]
+                      )
+                    ])
+                  ]
+                )
+              ])
+            ]
+          )
+        ]
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = [
   function() {
@@ -60983,6 +61490,144 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/components/Navbar.vue":
+/*!********************************************!*\
+  !*** ./resources/js/components/Navbar.vue ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Navbar_vue_vue_type_template_id_6dde423b___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Navbar.vue?vue&type=template&id=6dde423b& */ "./resources/js/components/Navbar.vue?vue&type=template&id=6dde423b&");
+/* harmony import */ var _Navbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Navbar.vue?vue&type=script&lang=js& */ "./resources/js/components/Navbar.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Navbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Navbar_vue_vue_type_template_id_6dde423b___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Navbar_vue_vue_type_template_id_6dde423b___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Navbar.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Navbar.vue?vue&type=script&lang=js&":
+/*!*********************************************************************!*\
+  !*** ./resources/js/components/Navbar.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Navbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Navbar.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Navbar.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Navbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Navbar.vue?vue&type=template&id=6dde423b&":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/Navbar.vue?vue&type=template&id=6dde423b& ***!
+  \***************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Navbar_vue_vue_type_template_id_6dde423b___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Navbar.vue?vue&type=template&id=6dde423b& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Navbar.vue?vue&type=template&id=6dde423b&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Navbar_vue_vue_type_template_id_6dde423b___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Navbar_vue_vue_type_template_id_6dde423b___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/UpBar.vue":
+/*!*******************************************!*\
+  !*** ./resources/js/components/UpBar.vue ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _UpBar_vue_vue_type_template_id_5770a81d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./UpBar.vue?vue&type=template&id=5770a81d& */ "./resources/js/components/UpBar.vue?vue&type=template&id=5770a81d&");
+/* harmony import */ var _UpBar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./UpBar.vue?vue&type=script&lang=js& */ "./resources/js/components/UpBar.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _UpBar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _UpBar_vue_vue_type_template_id_5770a81d___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _UpBar_vue_vue_type_template_id_5770a81d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/UpBar.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/UpBar.vue?vue&type=script&lang=js&":
+/*!********************************************************************!*\
+  !*** ./resources/js/components/UpBar.vue?vue&type=script&lang=js& ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_UpBar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./UpBar.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/UpBar.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_UpBar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/UpBar.vue?vue&type=template&id=5770a81d&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/UpBar.vue?vue&type=template&id=5770a81d& ***!
+  \**************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_UpBar_vue_vue_type_template_id_5770a81d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./UpBar.vue?vue&type=template&id=5770a81d& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/UpBar.vue?vue&type=template&id=5770a81d&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_UpBar_vue_vue_type_template_id_5770a81d___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_UpBar_vue_vue_type_template_id_5770a81d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
 
 /***/ }),
 

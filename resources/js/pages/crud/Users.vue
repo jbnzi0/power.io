@@ -1,5 +1,7 @@
 <template>
     <div class="container">
+        <Upbar></Upbar>
+        <Navbar></Navbar>
         <div class="row mt-5">
             <div class="col-md-12">
                 <div class="card">
@@ -132,7 +134,14 @@
 </template>
 
 <script>
+    import Navbar from '../../components/Navbar.vue'
+    import Upbar from '../../components/UpBar.vue'
+
     export default {
+        components:{
+            Navbar,
+            Upbar
+        },
         data(){
             return {
                 editMode: false,
