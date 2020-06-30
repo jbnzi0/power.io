@@ -2,6 +2,7 @@ import Dashboard from './pages/Dashboard.vue'
 import Users from './pages/crud/Users.vue'
 import Publications from './pages/crud/Publications.vue'
 import Awards from './pages/crud/Awards.vue'
+import Index from './pages/Index.vue'
 import VueRouter from 'vue-router'
 import { Form, HasError, AlertError } from 'vform'
 import Swal from 'sweetalert2'
@@ -20,7 +21,6 @@ const routes = [
   { path: '/users', name: 'Users', component: Users },
   { path: '/awards', name: 'Awards', component: Awards },
   { path: '/publications', name: 'Publications', component: Publications }
-
 ]
 
 const router = new VueRouter({

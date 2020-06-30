@@ -22,7 +22,7 @@
           <img src="/img/pp.jpg" class="img-circle elevation-2" alt="Cobra Bubbles">
         </div>
         <div class="info">
-          <a href="#" class="d-block"> {{ name }}</a> <!-- Will be the name of the connected user-->
+          <a href="#" class="d-block"> Joseph-Emmanuel Banzio </a> <!--  getAllUserInfos-->
         </div>
       </div>
 
@@ -64,17 +64,9 @@
             </router-link>
           </li>   
           
-          <li class="nav-item">
-            <router-link to="#" class="nav-link">
-              <i class="nav-icon fas fa-user"></i>
-              <p>
-                Profile
-              </p>
-            </router-link>
-          </li>
 
           <li class="nav-item">
-            <router-link to="/home" class="nav-link">
+            <router-link to="/" class="nav-link">
             <i class="nav-icon fas fa-home" area-hidden="true"></i>
               <p>
                 Home
@@ -82,7 +74,7 @@
             </router-link>
           </li>
 
-        <router-link to="/home" class="nav-link" @click.prevent="logout">
+        <router-link to="/logout" class="nav-link">
             <i class="nav-icon fas fa-power-off"></i>
             Logout
         </router-link>
@@ -101,21 +93,18 @@
 </template>
 
 <script>
+
+            
 export default {
-    name: 'dashbar',
+    name: 'dashboard',
     data: () => ({
         csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
         }),
     methods:{
-        logout:function(){
-            axios.post('logout').then(responsse => {
-                if(response.status === 302 || 401)
-                    console.log('logout');
-                else
-                    console.error('error');
-                }).catch(error => {
-                    console.error(error);
-                    
+        getUserName:function(){
+            axios.post('getCurrentUser').then(response => {
+                  console.log(response);
+                  
                 });
             }
         }
