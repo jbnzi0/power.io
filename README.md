@@ -30,3 +30,7 @@ When pressing the button home or logout in the dashboard, you need to press ente
 ## Pictures
 
 ![picture](https://www.upload.ee/image/12055407/wp.png)
+![picture](https://www.upload.ee/image/12055424/research.png)
+![picture](https://www.upload.ee/image/12055426/lab.png)
+![picture](https://www.upload.ee/image/12055428/dashboard.png)
+![picture](https://www.upload.ee/image/12055430/crud.png)
