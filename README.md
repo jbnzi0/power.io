@@ -4,7 +4,7 @@ I used Laravel with MySQL for the backend services and Vue.JS for the client.
 
 
 ## Installation
-First, you need to change the database information on the .env file. Then, you need to run the following commands to make Laravel and Vue work locally.
+First, you need to rename .env.example file to .env inside your project root and fill the database information. Then, you need to run the following commands to make Laravel and Vue work locally.
 ```bash
 composer install 
 php artisan key:generate
