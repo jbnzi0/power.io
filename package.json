@@ -13,7 +13,7 @@
         "@vue/cli-plugin-babel": "^3.4.0",
         "@vue/cli-plugin-eslint": "^3.4.0",
         "@vue/cli-service": "^4.4.5",
-        "axios": "^0.19.2",
+        "axios": "^0.21.1",
         "babel-plugin-component": "^1.1.1",
         "bootstrap": "^4.0.0",
         "cross-env": "^7.0",
